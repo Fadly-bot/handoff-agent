@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+HANDOFF_HOME="${HANDOFF_HOME:-$HOME/.handoff}"
+VENV_PYTHON="$HANDOFF_HOME/venv/bin/python3"
+export PYTHONPATH="$HANDOFF_HOME/src"
+
+if [ ! -f "$VENV_PYTHON" ]; then
+    echo "[handoff] Error: Python virtual environment not found at $VENV_PYTHON" >&2
+    echo "[handoff] Please reinstall Handoff Agent." >&2
+    exit 1
+fi
+
+exec "$VENV_PYTHON" -m handoff_agent "$@"
