@@ -410,11 +410,11 @@ def _template_parallel(workflow_id: str, **variables: Any) -> WorkflowDefinition
     nodes = (
         _node("start", NodeType.START.value),
         _node("fanout", NodeType.PARALLEL.value, next_nodes=("branch_a", "branch_b", "branch_c"), description="Parallel fan-out"),
-        _node("branch_a", NodeType.TASK.value, next_nodes=("merge",), dependencies=("fanout",), description="Branch A"),
-        _node("branch_b", NodeType.TASK.value, next_nodes=("merge",), dependencies=("fanout",), description="Branch B"),
-        _node("branch_c", NodeType.TASK.value, next_nodes=("merge",), dependencies=("fanout",), description="Branch C"),
-        _node("merge", NodeType.MERGE.value, dependencies=("branch_a", "branch_b", "branch_c"), next_nodes=("end",), description="Join branches"),
-        _node("end", NodeType.END.value, dependencies=("merge",)),
+        _node("branch_a", NodeType.TASK.value, next_nodes=("join",), dependencies=("fanout",), description="Branch A"),
+        _node("branch_b", NodeType.TASK.value, next_nodes=("join",), dependencies=("fanout",), description="Branch B"),
+        _node("branch_c", NodeType.TASK.value, next_nodes=("join",), dependencies=("fanout",), description="Branch C"),
+        _node("join", NodeType.MERGE.value, dependencies=("branch_a", "branch_b", "branch_c"), next_nodes=("end",), description="Join branches"),
+        _node("end", NodeType.END.value, dependencies=("join",)),
     )
     return _workflow_def(workflow_id, "parallel", nodes, **variables)
 
