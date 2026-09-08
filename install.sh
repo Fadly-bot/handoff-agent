@@ -106,7 +106,7 @@ CONFIG_FILE="$INSTALL_DIR/config.json"
 if [ ! -f "$CONFIG_FILE" ]; then
     cat > "$CONFIG_FILE" << 'CONFIG_EOF'
 {
-  "version": "0.1.0",
+  "version": "0.4.0",
   "default_provider": "claude",
   "output": "docs/HANDOFF.md",
   "auto_commit": false,
