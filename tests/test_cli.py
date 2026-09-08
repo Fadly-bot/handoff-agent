@@ -25,7 +25,7 @@ class TestVersionFlag:
     def test_version_outputs_version(self) -> None:
         result = run_handoff("--version")
         assert result.returncode == 0
-        assert "0.1.0" in result.stdout
+        assert "0.4.0" in result.stdout
 
     def test_version_contains_prog_name(self) -> None:
         result = run_handoff("--version")
@@ -119,6 +119,22 @@ class TestInspectSubcommand:
         result = run_handoff("--help")
         assert "inspect" in result.stdout
 
+    def test_mcp_in_help(self) -> None:
+        result = run_handoff("--help")
+        assert "mcp" in result.stdout
+
+    def test_mcp_requires_git_repo(self, tmp_path: Path) -> None:
+        plain = tmp_path / "plain"
+        plain.mkdir()
+        result = subprocess.run(
+            [PYTHON, "-m", "handoff_agent", "mcp"],
+            capture_output=True,
+            text=True,
+            cwd=str(plain),
+            env={**__import__("os").environ, "PYTHONPATH": str(SRC_DIR)},
+        )
+        assert result.returncode == 1
+
     def test_inspect_requires_git_repo(self, tmp_path: Path) -> None:
         plain = tmp_path / "plain"
         plain.mkdir()
@@ -167,4 +183,38 @@ class TestInspectSubcommand:
         )
         assert result.returncode == 0
         assert str(repo.resolve()) in result.stdout
+
+
+class TestRegistrySubcommand:
+    def test_registry_status(self, tmp_path: Path) -> None:
+        registry_dir = tmp_path / "handoff-home" / "registry"
+        registry_dir.mkdir(parents=True, exist_ok=True)
+        result = subprocess.run(
+            [PYTHON, "-m", "handoff_agent", "registry"],
+            capture_output=True,
+            text=True,
+            cwd=str(Path(__file__).resolve().parent.parent),
+            env={
+                **__import__("os").environ,
+                "PYTHONPATH": str(SRC_DIR),
+                "HANDOFF_HOME": str(tmp_path / "handoff-home"),
+            },
+        )
+        assert result.returncode == 0
+        assert "registry:" in result.stdout
+        assert "agent(s)" in result.stdout
+
+    def test_registry_list_option(self, tmp_path: Path) -> None:
+        result = subprocess.run(
+            [PYTHON, "-m", "handoff_agent", "registry", "--registry-action", "list"],
+            capture_output=True,
+            text=True,
+            cwd=str(Path(__file__).resolve().parent.parent),
+            env={
+                **__import__("os").environ,
+                "PYTHONPATH": str(SRC_DIR),
+                "HANDOFF_HOME": str(tmp_path / "handoff-home"),
+            },
+        )
+        assert result.returncode == 0
 

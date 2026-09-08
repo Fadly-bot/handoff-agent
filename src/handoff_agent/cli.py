@@ -1,6 +1,7 @@
 """CLI interface for Handoff Agent."""
 
 import argparse
+import os
 import sys
 from pathlib import Path
 
@@ -89,6 +90,33 @@ def cmd_config(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_registry(args: argparse.Namespace) -> int:
+    """Show the universal agent registry status (Phase 24)."""
+    from handoff_agent.registry import AgentRegistry
+
+    try:
+        registry = AgentRegistry()
+    except Exception as exc:
+        print(f"[handoff] error: registry unavailable: {exc}", file=sys.stderr)
+        return 1
+    payload = registry.cli_payload()
+    action = getattr(args, "registry_action", "status") or "status"
+    if action == "list":
+        for agent in payload["agents"]:
+            print(f"{agent['agent_id']}\t{agent['name']}\t{agent['status']}")
+    else:
+        print(f"[handoff] registry: {payload['count']} agent(s)")
+        for agent in payload["agents"]:
+            caps = ",".join(sorted(agent["capabilities"])) or "-"
+            print(
+                f"  {agent['agent_id']} ({agent['name']}) "
+                f"{agent['status']} platform={agent['platform'] or '-'} "
+                f"provider={agent['provider'] or '-'} model={agent['model'] or '-'} "
+                f"caps=[{caps}]"
+            )
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="handoff",
@@ -103,14 +131,24 @@ def build_parser() -> argparse.ArgumentParser:
             "  handoff --provider openai --model gpt-4o\n"
             "                             Use a specific provider and model\n"
             "  handoff config             Show provider configuration status\n"
+            "  handoff mcp                Run the Handoff MCP server over stdio\n"
+            "  handoff registry           Show agent registry status; use --registry-action list\n"
             "  handoff --commit           Generate, then commit ONLY docs/HANDOFF.md (never pushes)\n"
         ),
     )
     parser.add_argument(
         "command",
         nargs="?",
-        choices=["inspect", "config"],
-        help="Subcommand. 'inspect' shows project + git state. 'config' shows provider status.",
+        choices=["inspect", "config", "mcp", "registry"],
+        help="Subcommand. 'inspect' shows project + git state. 'config' shows provider status. "
+        "'mcp' runs the Handoff MCP server over stdio. 'registry' shows agent registry status.",
+    )
+    parser.add_argument(
+        "--registry-action",
+        type=str,
+        default="status",
+        choices=["status", "list"],
+        help="For 'registry': 'status' (default) shows a summary; 'list' prints agent ids.",
     )
     parser.add_argument(
         "--version", action="version", version=f"%(prog)s {__version__}"
@@ -405,6 +443,35 @@ def _commit_handoff(project_root: str | Path) -> int:
     return 0
 
 
+def cmd_mcp(args: argparse.Namespace) -> int:
+    """Run the Handoff MCP server over stdio.
+
+    The MCP server is a read/write server by default: clients that hold a
+    write capability (``create_checkpoint``) may create checkpoints. Pass the
+    environment variable ``HANDOFF_MCP_READ_ONLY=1`` (or ``true``) to force
+    read-only mode, which disables ``create_checkpoint``.
+    """
+    from handoff_agent.mcp.adapter import HandoffMCPAdapter
+    from handoff_agent.mcp.server import MCPServer
+
+    read_only = os.environ.get("HANDOFF_MCP_READ_ONLY", "").lower() in ("1", "true", "yes")
+
+    try:
+        adapter = HandoffMCPAdapter(project_root=args.path, read_only=read_only)
+    except Exception as exc:
+        print(f"[handoff] error: {exc}", file=sys.stderr)
+        return 1
+
+    if read_only:
+        print("[handoff] MCP server started (read-only)", file=sys.stderr)
+    else:
+        print("[handoff] MCP server started (read-write)", file=sys.stderr)
+
+    server = MCPServer(adapter)
+    server.serve()
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
@@ -412,6 +479,10 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_inspect(args)
     if args.command == "config":
         return cmd_config(args)
+    if args.command == "mcp":
+        return cmd_mcp(args)
+    if args.command == "registry":
+        return cmd_registry(args)
     return cmd_generate(args)
 
 
