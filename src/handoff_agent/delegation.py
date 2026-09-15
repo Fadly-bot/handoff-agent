@@ -9,6 +9,7 @@ unrestricted Git, no arbitrary agent execution).
 from __future__ import annotations
 
 import json
+import time
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from enum import Enum
@@ -21,6 +22,14 @@ from handoff_agent.capability import (
 )
 from handoff_agent.constants import HANDOFF_HOME
 from handoff_agent.persistence import _atomic_write_file, _contains_secret_like_content
+from handoff_agent.telemetry import (
+    TelemetryCollector,
+    TelemetryDomain,
+    TelemetryStatus,
+    end_trace_span,
+    emit_event,
+    start_trace_span,
+)
 from handoff_agent.registry import (
     AgentRecord,
     AgentRegistry,
@@ -351,6 +360,7 @@ class Delegator:
         state_dir: str | Path | None = None,
         require_human_approval: bool = False,
         boundary: PermissionBoundary | None = None,
+        telemetry: TelemetryCollector | None = None,
     ) -> None:
         self.registry = registry
         self.state_dir = Path(state_dir or HANDOFF_HOME / "delegation")
@@ -364,6 +374,9 @@ class Delegator:
         self._execution: dict[str, str] = {}
         self._results: dict[str, dict[str, Any]] = {}
         self._events: list[dict[str, str]] = []
+        self._telemetry = telemetry
+        self._task_spans: dict[str, str] = {}
+        self._task_started: dict[str, float] = {}
         self._load()
 
     # -- persistence --------------------------------------------------------
@@ -415,6 +428,29 @@ class Delegator:
         self._events.append(event)
         self._save()
 
+    def _finish_task_trace(
+        self,
+        task_id: str,
+        status: str,
+        *,
+        actor: str = "system",
+        error: Exception | str | None = None,
+        error_reason: str = "",
+    ) -> None:
+        span_id = self._task_spans.pop(task_id, "")
+        started = self._task_started.pop(task_id, None)
+        duration_ms = int((time.monotonic() - started) * 1000) if started is not None else 0
+        end_trace_span(
+            self._telemetry,
+            span_id,
+            status,
+            error=error,
+            error_reason=error_reason,
+            duration_ms=duration_ms,
+            latency_ms=duration_ms,
+            result={"task_id": task_id},
+        )
+
     # -- task lifecycle -----------------------------------------------------
 
     def _check(self, capability: str) -> None:
@@ -447,6 +483,16 @@ class Delegator:
         self._execution[definition.task_id] = ""
         self._results[definition.task_id] = {}
         self._log("task.created", actor, definition.task_id)
+        self._task_spans[definition.task_id] = start_trace_span(
+            self._telemetry,
+            domain=TelemetryDomain.TASK.value,
+            operation="delegate",
+            resource=definition.task_id,
+            trace_id=definition.task_id,
+            actor=actor,
+        )
+        self._task_started[definition.task_id] = time.monotonic()
+        self._save()
         return definition
 
     def get_task(self, task_id: str) -> TaskDefinition:
@@ -774,6 +820,11 @@ class Delegator:
         self._results[task_id] = payload
         self._status[task_id] = TaskLifecycle.SUCCESS.value
         self._log("task.result_accepted", agent_id, task_id, detail=execution_id)
+        self._finish_task_trace(
+            task_id,
+            TelemetryStatus.OK.value,
+            actor=agent_id,
+        )
         self._propagate_success(task_id, agent_id)
         self._save()
         return ResultAcceptance(
@@ -795,6 +846,13 @@ class Delegator:
         self._results[task_id] = {}
         self._status[task_id] = TaskLifecycle.FAILED.value
         self._log("task.failed", actor, task_id, detail=reason)
+        self._finish_task_trace(
+            task_id,
+            TelemetryStatus.ERROR.value,
+            actor=actor,
+            error=reason,
+            error_reason=reason,
+        )
         self._propagate_failure(task_id, reason, actor)
         self._save()
         return task
@@ -819,6 +877,17 @@ class Delegator:
             else TaskLifecycle.PENDING.value
         )
         self._log("task.retry", actor, task_id)
+        # restart the task trace (previous span was terminal)
+        self._finish_task_trace(task_id, TelemetryStatus.RETRY.value, actor=actor)
+        self._task_spans[task_id] = start_trace_span(
+            self._telemetry,
+            domain=TelemetryDomain.TASK.value,
+            operation="delegate",
+            resource=task_id,
+            trace_id=task_id,
+            actor=actor,
+        )
+        self._task_started[task_id] = time.monotonic()
         self._save()
         return task
 
@@ -881,6 +950,12 @@ class Delegator:
         task = self.get_task(task_id)
         self._status[task_id] = TaskLifecycle.FAILED.value
         self._log("task.timeout", actor, task_id)
+        self._finish_task_trace(
+            task_id,
+            TelemetryStatus.TIMEOUT.value,
+            actor=actor,
+            error_reason="timeout",
+        )
         self._propagate_failure(task_id, "timeout", actor)
         self._save()
         return task
@@ -891,6 +966,12 @@ class Delegator:
             raise AssignmentError(f"Task {task_id!r} is already terminal.")
         self._status[task_id] = TaskLifecycle.CANCELLED.value
         self._log("task.cancelled", actor, task_id, detail=reason)
+        self._finish_task_trace(
+            task_id,
+            TelemetryStatus.CANCELLED.value,
+            actor=actor,
+            error_reason=reason or "cancelled",
+        )
         self._save()
         return task
 

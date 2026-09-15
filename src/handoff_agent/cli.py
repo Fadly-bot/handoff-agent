@@ -117,6 +117,30 @@ def cmd_registry(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_telemetry(args: argparse.Namespace) -> int:
+    """Show telemetry diagnostics (health, degraded state, traces, timeline)."""
+    from handoff_agent.telemetry import default_collector
+
+    collector = default_collector()
+    payload = collector.cli_payload()
+    health = payload["health"]
+    print("[handoff] Telemetry diagnostics")
+    print(f"  enabled            : {collector.enabled}")
+    print(f"  local_only         : {health.get('local_only', True)}")
+    print(f"  events collected   : {health.get('total_events', 0)}")
+    print(f"  success / failure  : {health.get('success_count', 0)} / {health.get('failure_count', 0)}")
+    print(f"  timeouts / cancel  : {health.get('timeout_count', 0)} / {health.get('cancellation_count', 0)}")
+    print(f"  failure_rate       : {health.get('failure_rate', 0.0)}")
+    print(f"  degraded count     : {health.get('degraded_count', 0)}")
+    degraded = health.get("degraded", []) or []
+    for d in degraded[:10]:
+        print(f"    - {d['key']}: {d['reason']} (rate={d['failure_rate']})")
+    anomalies = health.get("anomalies", []) or []
+    for a in anomalies[:10]:
+        print(f"    anomaly: {a.get('type')} domain={a.get('domain')} rate={a.get('rate')}")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="handoff",
@@ -139,9 +163,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "command",
         nargs="?",
-        choices=["inspect", "config", "mcp", "registry"],
+        choices=["inspect", "config", "mcp", "registry", "telemetry"],
         help="Subcommand. 'inspect' shows project + git state. 'config' shows provider status. "
-        "'mcp' runs the Handoff MCP server over stdio. 'registry' shows agent registry status.",
+        "'mcp' runs the Handoff MCP server over stdio. 'registry' shows agent registry status. "
+        "'telemetry' shows telemetry diagnostics.",
     )
     parser.add_argument(
         "--registry-action",
@@ -303,17 +328,66 @@ def cmd_generate(args: argparse.Namespace) -> int:
     print(f"[handoff] Project: {ctx.project.name} ({ctx.project.project_type})")
     print(f"[handoff] Generating handoff document...")
 
+    from handoff_agent.telemetry import (
+        TelemetryDomain,
+        TelemetryStatus,
+        enable_default,
+        end_trace_span,
+        start_trace_span,
+    )
+
+    provider_span = start_trace_span(
+        enable_default(),
+        domain=TelemetryDomain.PROVIDER.value,
+        operation="generate",
+        resource=provider_name,
+        actor="cli",
+    )
+    import time as _time
+
+    _provider_started = _time.monotonic()
     try:
         result = provider.generate(ctx, prompt)
     except ProviderRequestError as exc:
+        end_trace_span(
+            enable_default(),
+            provider_span,
+            TelemetryStatus.ERROR.value,
+            error=exc,
+            error_reason=f"{provider_name} request failed",
+        )
         print(f"[handoff] error: {exc}", file=sys.stderr)
         return 1
     except ProviderConfigError as exc:
+        end_trace_span(
+            enable_default(),
+            provider_span,
+            TelemetryStatus.ERROR.value,
+            error=exc,
+            error_reason="provider configuration error",
+        )
         print(f"[handoff] error: {exc}", file=sys.stderr)
         return 1
     except Exception as exc:
+        end_trace_span(
+            enable_default(),
+            provider_span,
+            TelemetryStatus.ERROR.value,
+            error=exc,
+            error_reason="provider failed",
+        )
         print(f"[handoff] error: provider failed: {exc}", file=sys.stderr)
         return 1
+    _provider_elapsed_ms = int((_time.monotonic() - _provider_started) * 1000)
+    model_name = args.model or pcfg.get("model", "") or "(default)"
+    end_trace_span(
+        enable_default(),
+        provider_span,
+        TelemetryStatus.OK.value,
+        duration_ms=_provider_elapsed_ms,
+        latency_ms=_provider_elapsed_ms,
+        result={"provider": provider_name, "model": model_name},
+    )
 
     # ── 7. Persist result (checkpoint lifecycle for docs/HANDOFF.md) ────
     from handoff_agent.persistence import (
@@ -483,6 +557,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_mcp(args)
     if args.command == "registry":
         return cmd_registry(args)
+    if args.command == "telemetry":
+        return cmd_telemetry(args)
     return cmd_generate(args)
 
 

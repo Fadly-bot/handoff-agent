@@ -44,6 +44,12 @@ from handoff_agent.protocol import (
     validate_checkpoint,
     verify_identity,
 )
+from handoff_agent.telemetry import (
+    TelemetryCollector,
+    TelemetryDomain,
+    TelemetryStatus,
+    emit_event,
+)
 
 #: Continuity fields that a successor must preserve across a handoff.
 CONTINUITY_FIELDS: tuple[str, ...] = (
@@ -324,10 +330,16 @@ class WorkflowRecord:
 class WorkflowManager:
     """Coordinates multi-agent handoff workflows for one process."""
 
-    def __init__(self, adapter: Any | None = None) -> None:
+    def __init__(
+        self,
+        adapter: Any | None = None,
+        *,
+        telemetry: TelemetryCollector | None = None,
+    ) -> None:
         self.adapter = adapter
         self._agents: dict[str, AgentIdentity] = {}
         self._workflows: dict[str, WorkflowRecord] = {}
+        self._telemetry = telemetry
 
     # -- registration --------------------------------------------------------
 
@@ -653,6 +665,15 @@ class WorkflowManager:
             record, WorkflowState.HANDOFF_REQUESTED, actor,
             f"to consumer={consumer} token={request.token} objective={message[:60] or '(none)'}",
         )
+        emit_event(
+            self._telemetry,
+            domain=TelemetryDomain.HANDOFF.value,
+            operation="request",
+            status=TelemetryStatus.OK.value,
+            resource=record.workflow_id,
+            actor=actor,
+            metadata={"producer": record.producer, "consumer": consumer},
+        )
         return request
 
     def accept_handoff(
@@ -690,6 +711,15 @@ class WorkflowManager:
             record, WorkflowState.HANDOFF_ACCEPTED, actor,
             f"accepted token={token}",
         )
+        emit_event(
+            self._telemetry,
+            domain=TelemetryDomain.HANDOFF.value,
+            operation="accept",
+            status=TelemetryStatus.OK.value,
+            resource=record.workflow_id,
+            actor=actor,
+            metadata={"producer": record.producer, "consumer": record.consumer},
+        )
         return record
 
     def complete(self, record: WorkflowRecord, *, actor: str | None = None) -> WorkflowRecord:
@@ -713,6 +743,15 @@ class WorkflowManager:
         if not verifying["ok"]:
             raise WorkflowError("Refusing completion: current checkpoint fails verification.")
         self._transition(record, WorkflowState.COMPLETED, actor, "objective complete")
+        emit_event(
+            self._telemetry,
+            domain=TelemetryDomain.HANDOFF.value,
+            operation="complete",
+            status=TelemetryStatus.OK.value,
+            resource=record.workflow_id,
+            actor=actor,
+            metadata={"producer": record.producer, "consumer": record.consumer},
+        )
         return record
 
     def abandon(self, record: WorkflowRecord, *, reason: str = "", actor: str | None = None) -> WorkflowRecord:
@@ -728,6 +767,16 @@ class WorkflowManager:
         if record.state in TERMINAL_STATES:
             raise WorkflowStateError(f"Workflow already in terminal state {record.state.value}.")
         self._transition(record, WorkflowState.FAILED, actor, reason or "failed")
+        emit_event(
+            self._telemetry,
+            domain=TelemetryDomain.HANDOFF.value,
+            operation="fail",
+            status=TelemetryStatus.ERROR.value,
+            resource=record.workflow_id,
+            actor=actor,
+            error_type="handoff",
+            error_reason=reason or "failed",
+        )
         return record
 
     def recover(

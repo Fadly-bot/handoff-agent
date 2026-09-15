@@ -325,6 +325,14 @@ class HandoffMCPAdapter:
                     "properties": {},
                 },
             },
+            {
+                "name": "get_telemetry",
+                "description": "Get telemetry diagnostics (health, degraded state, timelines). Never exposes secrets.",
+                "inputSchema": {
+                    "type": "object",
+                    "properties": {},
+                },
+            },
         ]
         if not self._read_only:
             tools.append(
@@ -387,6 +395,7 @@ class HandoffMCPAdapter:
             "validate_checkpoint": self._tool_validate_checkpoint,
             "create_checkpoint": self._tool_create_checkpoint,
             "get_capabilities": self._tool_get_capabilities,
+            "get_telemetry": self._tool_get_telemetry,
         }
         handler = dispatch.get(name)
         if handler is None:
@@ -403,6 +412,7 @@ class HandoffMCPAdapter:
             "validate_checkpoint": CAP_VALIDATION,
             "create_checkpoint": CAP_CHECKPOINT_CREATE,
             "get_capabilities": CAP_VALIDATION,
+            "get_telemetry": CAP_VALIDATION,
         }
         return mapping.get(name, "unknown.cap")
 
@@ -429,6 +439,14 @@ class HandoffMCPAdapter:
             "granted": sorted(self._contract.granted),
             "read_only": self._read_only,
         }
+        return {
+            "content": [{"type": "text", "text": json.dumps(payload, indent=2)}],
+        }
+
+    def _tool_get_telemetry(self, args: dict[str, Any]) -> dict[str, Any]:
+        from handoff_agent.telemetry import default_collector
+
+        payload = default_collector().mcp_payload()
         return {
             "content": [{"type": "text", "text": json.dumps(payload, indent=2)}],
         }

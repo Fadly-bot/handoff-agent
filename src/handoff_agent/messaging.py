@@ -18,6 +18,14 @@ from typing import Any, Mapping
 
 from handoff_agent.constants import HANDOFF_HOME
 from handoff_agent.persistence import _atomic_write_file, _contains_secret_like_content
+from handoff_agent.telemetry import (
+    TelemetryCollector,
+    TelemetryDomain,
+    TelemetryStatus,
+    end_trace_span,
+    emit_event,
+    start_trace_span,
+)
 
 MESSAGING_PROTOCOL_VERSION = "1"
 
@@ -399,6 +407,7 @@ class MessageBroker:
         *,
         require_sender_authorization: bool = True,
         require_receiver_authorization: bool = True,
+        telemetry: TelemetryCollector | None = None,
     ) -> None:
         self.state_dir = Path(state_dir or HANDOFF_HOME / "messaging")
         self.state_dir.mkdir(parents=True, exist_ok=True)
@@ -408,6 +417,9 @@ class MessageBroker:
         self._sequences: dict[str, int] = {}
         self._events: list[dict[str, str]] = []
         self._known_agents: set[str] = set()
+        self._telemetry = telemetry
+        self._message_traces: dict[str, str] = {}
+        self._message_started: dict[str, float] = {}
         self._load()
 
     # -- persistence --------------------------------------------------------
@@ -456,6 +468,42 @@ class MessageBroker:
         if _contains_secret_like_content(secret_scan):
             event = {**event, "detail": "[redacted]"}
         self._events.append(event)
+
+    def _finish_message_trace(
+        self,
+        message_id: str,
+        status: str,
+        *,
+        actor: str = "system",
+        error: Exception | str | None = None,
+        error_reason: str = "",
+        retry_count: int = 0,
+        result: dict[str, Any] | None = None,
+    ) -> None:
+        span_id = self._message_traces.pop(message_id, "")
+        started = self._message_started.pop(message_id, None)
+        duration_ms = int((time.monotonic() - started) * 1000) if started is not None else 0
+        end_trace_span(
+            self._telemetry,
+            span_id,
+            status,
+            error=error,
+            error_reason=error_reason,
+            result=result,
+            duration_ms=duration_ms,
+            latency_ms=duration_ms,
+        )
+        if retry_count and span_id:
+            emit_event(
+                self._telemetry,
+                domain=TelemetryDomain.MESSAGE.value,
+                operation="retry",
+                status=TelemetryStatus.RETRY.value,
+                resource=message_id,
+                actor=actor,
+                retry_count=retry_count,
+                metadata={"message_id": message_id},
+            )
 
     # -- agent registration for authorization --------------------------------
 
@@ -538,6 +586,16 @@ class MessageBroker:
             )
         self._messages[envelope.message_id] = envelope
         self._log("message.send", actor or envelope.sender_agent_id, envelope.message_id)
+        if envelope.status != MessageStatus.EXPIRED.value:
+            self._message_traces[envelope.message_id] = start_trace_span(
+                self._telemetry,
+                domain=TelemetryDomain.MESSAGE.value,
+                operation="message",
+                resource=envelope.message_id,
+                trace_id=envelope.correlation_id or envelope.message_id,
+                actor=actor or envelope.sender_agent_id,
+            )
+            self._message_started[envelope.message_id] = time.monotonic()
         self._save()
         return envelope
 
@@ -594,6 +652,12 @@ class MessageBroker:
         updated = envelope.with_(**updates)
         self._messages[message_id] = updated
         self._log("message.completed", actor, message_id)
+        self._finish_message_trace(
+            message_id,
+            TelemetryStatus.OK.value,
+            actor=actor,
+            result=result,
+        )
         self._save()
         return updated
 
@@ -609,6 +673,13 @@ class MessageBroker:
         )
         self._messages[message_id] = updated
         self._log("message.failed", actor, message_id, detail=reason)
+        self._finish_message_trace(
+            message_id,
+            TelemetryStatus.ERROR.value,
+            actor=actor,
+            error=reason,
+            error_reason=reason,
+        )
         self._save()
         return updated
 
@@ -622,6 +693,12 @@ class MessageBroker:
         )
         self._messages[message_id] = updated
         self._log("message.cancelled", actor, message_id, detail=reason)
+        self._finish_message_trace(
+            message_id,
+            TelemetryStatus.CANCELLED.value,
+            actor=actor,
+            error_reason=reason or "cancelled",
+        )
         self._save()
         return updated
 
@@ -644,6 +721,28 @@ class MessageBroker:
         )
         self._messages[message_id] = updated
         self._log("message.retry", actor, message_id, detail=f"attempt={updated.retry_count}")
+        if message_id in self._message_traces:
+            # keep the same trace; emit a structured retry event
+            emit_event(
+                self._telemetry,
+                domain=TelemetryDomain.MESSAGE.value,
+                operation="retry",
+                status=TelemetryStatus.RETRY.value,
+                resource=message_id,
+                actor=actor,
+                retry_count=updated.retry_count,
+                metadata={"message_id": message_id},
+            )
+        else:
+            self._message_traces[message_id] = start_trace_span(
+                self._telemetry,
+                domain=TelemetryDomain.MESSAGE.value,
+                operation="message",
+                resource=message_id,
+                trace_id=envelope.correlation_id or message_id,
+                actor=actor,
+            )
+            self._message_started[message_id] = time.monotonic()
         self._save()
         return updated
 
@@ -672,6 +771,12 @@ class MessageBroker:
                 self._messages[mid] = updated
                 stale.append(updated)
                 self._log("message.expired", "system", mid)
+                self._finish_message_trace(
+                    mid,
+                    TelemetryStatus.TIMEOUT.value,
+                    actor="system",
+                    error_reason="TTL exceeded",
+                )
         if stale:
             self._save()
         return stale

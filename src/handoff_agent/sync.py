@@ -22,6 +22,14 @@ from typing import Any, Callable, Mapping
 
 from handoff_agent.constants import HANDOFF_HOME
 from handoff_agent.persistence import _atomic_write_file, _contains_secret_like_content
+from handoff_agent.telemetry import (
+    TelemetryCollector,
+    TelemetryDomain,
+    TelemetryStatus,
+    end_trace_span,
+    emit_event,
+    start_trace_span,
+)
 
 SYNC_PROTOCOL_VERSION = "1"
 MAX_SYNC_ITEM_BYTES = 10 * 1024 * 1024
@@ -1124,6 +1132,7 @@ class SyncCoordinator:
         lock_ttl_seconds: int = DEFAULT_LOCK_TTL,
         lease_seconds: int = DEFAULT_LEASE_SECONDS,
         max_queue: int = MAX_QUEUE_SIZE,
+        telemetry: TelemetryCollector | None = None,
     ) -> None:
         self.devices = device_registry
         self.state_dir = Path(state_dir or HANDOFF_HOME / "sync")
@@ -1136,6 +1145,9 @@ class SyncCoordinator:
         self.lock_ttl_seconds = lock_ttl_seconds
         self.lease_seconds = lease_seconds
         self.max_queue = max_queue
+        self._telemetry = telemetry
+        self._session_span: dict[str, str] = {}
+        self._session_started: dict[str, float] = {}
         self._sessions: dict[str, SyncSession] = {}
         self._locks: dict[str, SyncLock] = {}
         self._offline_queue: dict[str, list[QueuedSync]] = {}
@@ -1278,6 +1290,15 @@ class SyncCoordinator:
         )
         self._sessions[session_id] = session
         self._log("session.started", actor, session_id, sync_id)
+        self._session_span[session_id] = start_trace_span(
+            self._telemetry,
+            domain=TelemetryDomain.SYNC.value,
+            operation="synchronize",
+            resource=device_id,
+            trace_id=correlation_id or session_id,
+            actor=actor,
+        )
+        self._session_started[session_id] = time.monotonic()
         self._save()
         return session
 
@@ -1416,6 +1437,7 @@ class SyncCoordinator:
             session = session.with_(cursor=manifest.cursor)
             self._applied_sync_ids.add(session.sync_id)
             self._log("sync.completed", device_id, session.session_id)
+            self._finish_session_trace(session.session_id, TelemetryStatus.OK.value, device_id)
             self.devices.heartbeat(device_id, actor="device")
         except IntegrityViolationError:
             self._fail_session(session, "integrity violation", device_id)
@@ -1727,12 +1749,41 @@ class SyncCoordinator:
         self._save()
         return session
 
+    def _finish_session_trace(
+        self, session_id: str, status: str, device_id: str
+    ) -> None:
+        span_id = self._session_span.pop(session_id, "")
+        started = self._session_started.pop(session_id, None)
+        duration_ms = int((time.monotonic() - started) * 1000) if started is not None else 0
+        end_trace_span(
+            self._telemetry,
+            span_id,
+            status,
+            duration_ms=duration_ms,
+            latency_ms=duration_ms,
+            result={"session_id": session_id, "device_id": device_id},
+        )
+
     def _fail_session(self, session: SyncSession, error: str, device_id: str) -> None:
         failed = session.with_(
             state=SyncState.FAILED.value, completed_at=_now_iso(), error=error
         )
         self._sessions[session.session_id] = failed
         self._log("session.failed", device_id, session.session_id, error)
+        self._finish_session_trace(
+            session.session_id, TelemetryStatus.ERROR.value, device_id
+        )
+        emit_event(
+            self._telemetry,
+            domain=TelemetryDomain.SYNC.value,
+            operation="synchronize",
+            status=TelemetryStatus.ERROR.value,
+            resource=device_id,
+            actor="device",
+            error_type="sync",
+            error_reason=error,
+            metadata={"session_id": session.session_id},
+        )
         self._save()
 
     def device_recovery(

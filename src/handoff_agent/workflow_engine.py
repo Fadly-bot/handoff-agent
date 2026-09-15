@@ -20,6 +20,15 @@ from typing import Any, Iterable, Mapping
 from handoff_agent.capability import is_known_capability
 from handoff_agent.constants import HANDOFF_HOME
 from handoff_agent.persistence import _atomic_write_file, _contains_secret_like_content
+from handoff_agent.telemetry import (
+    TelemetryCollector,
+    TelemetryDomain,
+    TelemetryStatus,
+    classify_error,
+    end_trace_span,
+    emit_event,
+    start_trace_span,
+)
 
 WORKFLOW_PROTOCOL_VERSION = "1"
 _DEADLOCK_DEPTH = 20
@@ -609,6 +618,7 @@ class WorkflowEngine:
         *,
         require_human_approval: bool = False,
         max_concurrency: int = 4,
+        telemetry: TelemetryCollector | None = None,
     ) -> None:
         self.state_dir = Path(state_dir or HANDOFF_HOME / "workflow_engine")
         self.state_dir.mkdir(parents=True, exist_ok=True)
@@ -617,6 +627,9 @@ class WorkflowEngine:
         self._workflows: dict[str, WorkflowDefinition] = {}
         self._executions: dict[str, WorkflowExecution] = {}
         self._events: list[dict[str, str]] = []
+        self._telemetry = telemetry
+        self._workflow_spans: dict[str, str] = {}
+        self._node_spans: dict[str, str] = {}
         self._load()
 
     # -- persistence --------------------------------------------------------
@@ -793,6 +806,15 @@ class WorkflowEngine:
         )
         self._executions[exec_id] = exec_obj
         self._log("workflow.triggered", actor, workflow_id, detail=f"trigger={trigger}")
+        emit_event(
+            self._telemetry,
+            domain=TelemetryDomain.WORKFLOW.value,
+            operation="trigger",
+            status=TelemetryStatus.OK.value,
+            resource=workflow_id,
+            actor=actor,
+            metadata={"execution_id": exec_id, "trigger": trigger},
+        )
         self._save_executions()
         return exec_obj
 
@@ -830,6 +852,16 @@ class WorkflowEngine:
         )
         self._executions[execution_id] = exec_obj
         self._log("workflow.started", actor, execution.workflow_id, detail=execution_id)
+        span_id = start_trace_span(
+            self._telemetry,
+            domain=TelemetryDomain.WORKFLOW.value,
+            operation="run",
+            resource=execution.workflow_id,
+            trace_id=exec_obj.correlation_id or execution_id,
+            actor=actor,
+        )
+        if span_id:
+            self._workflow_spans[execution_id] = span_id
         self._save_executions()
         return exec_obj
 
@@ -885,6 +917,13 @@ class WorkflowEngine:
         )
         self._executions[execution_id] = exec_obj
         self._log("workflow.cancelled", actor, exec_obj.workflow_id, detail=execution_id)
+        end_trace_span(
+            self._telemetry,
+            self._workflow_spans.pop(execution_id, ""),
+            TelemetryStatus.CANCELLED.value,
+            error_reason=reason or "cancelled",
+            result={"execution_id": execution_id},
+        )
         self._save_executions()
         return exec_obj
 
@@ -927,6 +966,15 @@ class WorkflowEngine:
         )
         self._executions[new_exec_id] = new_exec
         self._log("workflow.retried", actor, exec_obj.workflow_id, detail=execution_id)
+        emit_event(
+            self._telemetry,
+            domain=TelemetryDomain.WORKFLOW.value,
+            operation="retry",
+            status=TelemetryStatus.RETRY.value,
+            resource=exec_obj.workflow_id,
+            actor=actor,
+            metadata={"from_execution": execution_id, "to_execution": new_exec_id},
+        )
         self._save_executions()
         return new_exec
 
@@ -981,6 +1029,13 @@ class WorkflowEngine:
         )
         self._executions[execution_id] = exec_obj
         self._log("workflow.timeout", actor, exec_obj.workflow_id, detail=execution_id)
+        end_trace_span(
+            self._telemetry,
+            self._workflow_spans.pop(execution_id, ""),
+            TelemetryStatus.TIMEOUT.value,
+            error_reason=f"exceeded timeout of {timeout_seconds}s",
+            result={"execution_id": execution_id},
+        )
         self._save_executions()
         return exec_obj
 
@@ -1105,6 +1160,17 @@ class WorkflowEngine:
         exec_obj = exec_obj.with_(node_executions=tuple(node_execs))
         self._executions[execution_id] = exec_obj
         self._log("workflow.node_running", actor, exec_obj.workflow_id, detail=f"{execution_id}:{node_id}")
+        node_span = start_trace_span(
+            self._telemetry,
+            domain=TelemetryDomain.TASK.value,
+            operation=f"node:{node_id}",
+            resource=exec_obj.workflow_id,
+            trace_id=exec_obj.correlation_id or execution_id,
+            parent_span_id=self._workflow_spans.get(execution_id, ""),
+            actor=actor,
+        )
+        if node_span:
+            self._node_spans[f"{execution_id}:{node_id}"] = node_span
         self._save_executions()
         return updated
 
@@ -1137,6 +1203,12 @@ class WorkflowEngine:
         exec_obj = self._propagate_results(exec_obj, node_id, dict(result or {}))
         self._executions[execution_id] = exec_obj
         self._log("workflow.node_completed", actor, exec_obj.workflow_id, detail=f"{execution_id}:{node_id}")
+        end_trace_span(
+            self._telemetry,
+            self._node_spans.pop(f"{execution_id}:{node_id}", ""),
+            TelemetryStatus.OK.value,
+            result=dict(result or {}),
+        )
         if self._is_complete(exec_obj):
             exec_obj = exec_obj.with_(
                 status=WorkflowStatus.COMPLETED.value,
@@ -1144,6 +1216,12 @@ class WorkflowEngine:
             )
             self._executions[execution_id] = exec_obj
             self._log("workflow.completed", actor, exec_obj.workflow_id, detail=execution_id)
+            end_trace_span(
+                self._telemetry,
+                self._workflow_spans.pop(execution_id, ""),
+                TelemetryStatus.OK.value,
+                result={"execution_id": execution_id},
+            )
         self._save_executions()
         return exec_obj
 
@@ -1172,6 +1250,14 @@ class WorkflowEngine:
         exec_obj = self._propagate_failure(exec_obj, node_id, reason)
         self._executions[execution_id] = exec_obj
         self._log("workflow.node_failed", actor, exec_obj.workflow_id, detail=f"{execution_id}:{node_id} {reason}")
+        end_trace_span(
+            self._telemetry,
+            self._node_spans.pop(f"{execution_id}:{node_id}", ""),
+            TelemetryStatus.ERROR.value,
+            error=reason,
+            error_reason=reason,
+            result={"execution_id": execution_id},
+        )
         self._save_executions()
         return exec_obj
 
@@ -1445,6 +1531,17 @@ class WorkflowEngine:
         exec_obj = exec_obj.with_(node_executions=tuple(node_execs))
         self._executions[execution_id] = exec_obj
         self._log("workflow.provider_failure", actor, exec_obj.workflow_id, detail=f"{execution_id}:{node_id}")
+        emit_event(
+            self._telemetry,
+            domain=TelemetryDomain.PROVIDER.value,
+            operation="call",
+            status=TelemetryStatus.ERROR.value,
+            resource=exec_obj.workflow_id,
+            actor=actor,
+            error_type="provider",
+            error_reason="provider failure",
+            metadata={"execution_id": execution_id, "node_id": node_id},
+        )
         self._save_executions()
         return exec_obj
 

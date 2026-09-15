@@ -43,6 +43,12 @@ from handoff_agent.capability import (
 )
 from handoff_agent.constants import HANDOFF_HOME
 from handoff_agent.persistence import _atomic_write_file, _contains_secret_like_content
+from handoff_agent.telemetry import (
+    TelemetryCollector,
+    TelemetryDomain,
+    TelemetryStatus,
+    emit_event,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -512,12 +518,14 @@ class PersistentOrchestrator:
         timeout_seconds: int = 3600,
         require_human_approval: bool = False,
         boundary: PermissionBoundary | None = None,
+        telemetry: TelemetryCollector | None = None,
     ) -> None:
         self.state_dir = Path(state_dir or HANDOFF_HOME / "orchestration")
         self.timeout_seconds = timeout_seconds
         self.require_human_approval = require_human_approval
         self.boundary = boundary
         self._adapter: Any | None = None
+        self._telemetry = telemetry
         self.state_dir.mkdir(parents=True, exist_ok=True)
 
     # -- persistence plumbing -------------------------------------------------
@@ -631,6 +639,15 @@ class PersistentOrchestrator:
             meta=dict(meta or {}),
         )
         self._log(record, "workflow.created", actor, detail=project_id)
+        emit_event(
+            self._telemetry,
+            domain=TelemetryDomain.WORKFLOW.value,
+            operation="create",
+            status=TelemetryStatus.OK.value,
+            resource=record.workflow_id,
+            actor=actor,
+            metadata={"project_id": project_id, "name": name},
+        )
         return self._commit(record)
 
     def get_workflow(self, workflow_id: str) -> WorkflowRecord:
@@ -951,6 +968,15 @@ class PersistentOrchestrator:
             execution_id=execution_id,
             detail=f"agent={agent_id}",
         )
+        emit_event(
+            self._telemetry,
+            domain=TelemetryDomain.TASK.value,
+            operation="complete",
+            status=TelemetryStatus.OK.value,
+            resource=task_id,
+            actor=actor or agent_id,
+            metadata={"workflow_id": workflow_id, "execution_id": execution_id},
+        )
         self._propagate(record, task_id, actor)
         self._tick_workflow_status(record, actor)
         return self._commit(record)
@@ -989,6 +1015,17 @@ class PersistentOrchestrator:
             completed_at=_now_iso(),
         )
         self._log(record, "task.failed", actor, task_id=task_id, execution_id=execution_id, detail=error)
+        emit_event(
+            self._telemetry,
+            domain=TelemetryDomain.TASK.value,
+            operation="fail",
+            status=TelemetryStatus.ERROR.value,
+            resource=task_id,
+            actor=actor,
+            error_type="agent",
+            error_reason=error,
+            metadata={"workflow_id": workflow_id, "execution_id": execution_id},
+        )
         self._propagate(record, task_id, actor)
         self._tick_workflow_status(record, actor)
         return self._commit(record)
@@ -1014,6 +1051,16 @@ class PersistentOrchestrator:
             )
         record.tasks[task_id] = task._with(status=TaskStatus.CANCELLED, error=reason)
         self._log(record, "task.cancelled", actor, task_id=task_id, detail=reason)
+        emit_event(
+            self._telemetry,
+            domain=TelemetryDomain.TASK.value,
+            operation="cancel",
+            status=TelemetryStatus.CANCELLED.value,
+            resource=task_id,
+            actor=actor,
+            error_reason=reason or "cancelled",
+            metadata={"workflow_id": workflow_id},
+        )
         self._propagate(record, task_id, actor)
         self._tick_workflow_status(record, actor)
         return self._commit(record)

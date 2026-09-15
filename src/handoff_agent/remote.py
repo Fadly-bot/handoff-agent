@@ -22,6 +22,15 @@ from urllib.parse import urlparse
 
 from handoff_agent.constants import HANDOFF_HOME
 from handoff_agent.persistence import _atomic_write_file, _contains_secret_like_content
+from handoff_agent.telemetry import (
+    TelemetryCollector,
+    TelemetryDomain,
+    TelemetryStatus,
+    classify_error,
+    end_trace_span,
+    emit_event,
+    start_trace_span,
+)
 
 REMOTE_PROTOCOL_VERSION = "1"
 _HTTPS_PORT = 443
@@ -565,6 +574,7 @@ class RemoteHandoff:
         transport: RemoteTransport | None = None,
         read_only: bool = False,
         require_human_approval: bool = False,
+        telemetry: TelemetryCollector | None = None,
     ) -> None:
         self.endpoints = endpoint_registry
         self.transport = transport or RemoteTransport()
@@ -572,6 +582,9 @@ class RemoteHandoff:
         self.require_human_approval = require_human_approval
         self._operation_log: list[dict[str, str]] = []
         self._request_history: dict[str, str] = {}
+        self._telemetry = telemetry
+        self._operation_span: dict[str, str] = {}
+        self._operation_started: dict[str, float] = {}
 
     # -- SSRF protection ---------------------------------------------------
 
@@ -792,6 +805,16 @@ class RemoteHandoff:
         signature = self._sign_request(payload_data, token=token)
         rid = request_id or _new_request_id(endpoint_id)
         corr = correlation_id or rid
+        op_key = f"{rid}:{operation}"
+        self._operation_span[op_key] = start_trace_span(
+            self._telemetry,
+            domain=TelemetryDomain.REMOTE.value,
+            operation=operation,
+            resource=f"{endpoint_id}",
+            trace_id=corr,
+            actor=actor,
+        )
+        self._operation_started[op_key] = time.monotonic()
         attempts = 0
         delay = endpoint.backoff_base_seconds
         last_error: RemoteError | None = None
@@ -1148,6 +1171,36 @@ class RemoteHandoff:
         if _contains_secret_like_content(secret_scan):
             entry = {**entry, "detail": "[redacted]"}
         self._operation_log.append(entry)
+        op_key = f"{request_id}:{operation}"
+        span_id = self._operation_span.pop(op_key, "")
+        started = self._operation_started.pop(op_key, None)
+        duration_ms = int((time.monotonic() - started) * 1000) if started is not None else 0
+        telemetry_status = (
+            TelemetryStatus.OK.value if status == "ok" else TelemetryStatus.ERROR.value
+        )
+        end_trace_span(
+            self._telemetry,
+            span_id,
+            telemetry_status,
+            error_reason=detail if status != "ok" else "",
+            error=detail if status != "ok" else None,
+            duration_ms=duration_ms,
+            latency_ms=duration_ms,
+            result={"operation": operation, "endpoint_id": endpoint_id},
+        )
+        if status != "ok":
+            emit_event(
+                self._telemetry,
+                domain=TelemetryDomain.REMOTE.value,
+                operation=operation,
+                status=TelemetryStatus.ERROR.value,
+                resource=endpoint_id,
+                actor=actor,
+                error_type="remote",
+                error_reason=detail,
+                duration_ms=duration_ms,
+                metadata={"operation": operation, "request_id": request_id},
+            )
 
     def operation_log(self) -> tuple[dict[str, str], ...]:
         return tuple(dict(e) for e in self._operation_log)
