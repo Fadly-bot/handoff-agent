@@ -10546,3 +10546,11451 @@ Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
 ```
 
 ---
+
+## Checkpoint 2026-09-15T12:11:03+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-08T02:52:16+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:03+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T12:11:03+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:03+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T12:11:03+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:03+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "f726492faaa536796d75e4e866634d75f7271e70ad8b0d9079ac739e6bcec224",
+    "generated_at": "2026-09-15T12:11:03+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:03+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "91802034e9fc6b93a006d1af72b20dcc1d4e141f2350f0f907aae6d3d2939e5a",
+    "generated_at": "2026-09-15T12:11:03+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:03+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "33787f32c46d65bbda34c190102dfd4a9dcd80d0578193dff05ce70a628aa0cf",
+    "generated_at": "2026-09-15T12:11:03+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:04+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c843ca553c68bf4f7b388819e3a0486cfb404de150dfa5f3eb86253b941bcf45",
+    "generated_at": "2026-09-15T12:11:03+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:04+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "68d85732f29b60557d0aca34d7d3c98237518310de1dc3f334a6f67affb702e1",
+    "generated_at": "2026-09-15T12:11:04+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:04+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "9b6d54b6d4be5c3cba566c3f68f8ffeb9a352279baf4ac1c7ec824a82b69ddf8",
+    "generated_at": "2026-09-15T12:11:04+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:04+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "eca3383827c2c4e6fa9124909742d07719cca30c92d3a2d99bb91cddc464ba6c",
+    "generated_at": "2026-09-15T12:11:04+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:15+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c28fc7f1bceceee0795bb5c02a650fd6490e625426f7a65018b8c7c45b8f8982",
+    "generated_at": "2026-09-15T12:11:04+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:15+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T12:11:15+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:16+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T12:11:15+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:16+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T12:11:16+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:16+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T12:11:16+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:16+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T12:11:16+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:16+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T12:11:16+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:11:16+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T12:11:16+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:15+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T12:11:16+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:15+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T12:25:15+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:15+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T12:25:15+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:15+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "f726492faaa536796d75e4e866634d75f7271e70ad8b0d9079ac739e6bcec224",
+    "generated_at": "2026-09-15T12:25:15+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:15+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "91802034e9fc6b93a006d1af72b20dcc1d4e141f2350f0f907aae6d3d2939e5a",
+    "generated_at": "2026-09-15T12:25:15+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:15+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "33787f32c46d65bbda34c190102dfd4a9dcd80d0578193dff05ce70a628aa0cf",
+    "generated_at": "2026-09-15T12:25:15+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:15+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c843ca553c68bf4f7b388819e3a0486cfb404de150dfa5f3eb86253b941bcf45",
+    "generated_at": "2026-09-15T12:25:15+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:16+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "68d85732f29b60557d0aca34d7d3c98237518310de1dc3f334a6f67affb702e1",
+    "generated_at": "2026-09-15T12:25:15+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:17+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "9b6d54b6d4be5c3cba566c3f68f8ffeb9a352279baf4ac1c7ec824a82b69ddf8",
+    "generated_at": "2026-09-15T12:25:16+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:17+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "eca3383827c2c4e6fa9124909742d07719cca30c92d3a2d99bb91cddc464ba6c",
+    "generated_at": "2026-09-15T12:25:17+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:24+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c28fc7f1bceceee0795bb5c02a650fd6490e625426f7a65018b8c7c45b8f8982",
+    "generated_at": "2026-09-15T12:25:17+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:24+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T12:25:24+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:24+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T12:25:24+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:24+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T12:25:24+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:24+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T12:25:24+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:24+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T12:25:24+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:24+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T12:25:24+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:25:24+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T12:25:24+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:29:56+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T12:25:24+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:29:56+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T12:29:56+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:29:56+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T12:29:56+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:29:56+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "f726492faaa536796d75e4e866634d75f7271e70ad8b0d9079ac739e6bcec224",
+    "generated_at": "2026-09-15T12:29:56+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:29:56+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "91802034e9fc6b93a006d1af72b20dcc1d4e141f2350f0f907aae6d3d2939e5a",
+    "generated_at": "2026-09-15T12:29:56+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:29:56+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "33787f32c46d65bbda34c190102dfd4a9dcd80d0578193dff05ce70a628aa0cf",
+    "generated_at": "2026-09-15T12:29:56+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:29:57+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c843ca553c68bf4f7b388819e3a0486cfb404de150dfa5f3eb86253b941bcf45",
+    "generated_at": "2026-09-15T12:29:56+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:29:57+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "68d85732f29b60557d0aca34d7d3c98237518310de1dc3f334a6f67affb702e1",
+    "generated_at": "2026-09-15T12:29:57+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:29:57+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "9b6d54b6d4be5c3cba566c3f68f8ffeb9a352279baf4ac1c7ec824a82b69ddf8",
+    "generated_at": "2026-09-15T12:29:57+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:29:57+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "eca3383827c2c4e6fa9124909742d07719cca30c92d3a2d99bb91cddc464ba6c",
+    "generated_at": "2026-09-15T12:29:57+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:30:06+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c28fc7f1bceceee0795bb5c02a650fd6490e625426f7a65018b8c7c45b8f8982",
+    "generated_at": "2026-09-15T12:29:57+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:30:06+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T12:30:06+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:30:06+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T12:30:06+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:30:06+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T12:30:06+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:30:06+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T12:30:06+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:30:06+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T12:30:06+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:30:07+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T12:30:06+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T12:30:07+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T12:30:07+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:06:42+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T12:30:07+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:06:42+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:06:42+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:06:43+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:06:42+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:06:43+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "f726492faaa536796d75e4e866634d75f7271e70ad8b0d9079ac739e6bcec224",
+    "generated_at": "2026-09-15T13:06:43+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:06:44+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "91802034e9fc6b93a006d1af72b20dcc1d4e141f2350f0f907aae6d3d2939e5a",
+    "generated_at": "2026-09-15T13:06:43+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:06:44+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "33787f32c46d65bbda34c190102dfd4a9dcd80d0578193dff05ce70a628aa0cf",
+    "generated_at": "2026-09-15T13:06:44+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:06:44+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c843ca553c68bf4f7b388819e3a0486cfb404de150dfa5f3eb86253b941bcf45",
+    "generated_at": "2026-09-15T13:06:44+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:06:44+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "68d85732f29b60557d0aca34d7d3c98237518310de1dc3f334a6f67affb702e1",
+    "generated_at": "2026-09-15T13:06:44+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:06:45+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "9b6d54b6d4be5c3cba566c3f68f8ffeb9a352279baf4ac1c7ec824a82b69ddf8",
+    "generated_at": "2026-09-15T13:06:44+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:06:45+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "eca3383827c2c4e6fa9124909742d07719cca30c92d3a2d99bb91cddc464ba6c",
+    "generated_at": "2026-09-15T13:06:45+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:07:10+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c28fc7f1bceceee0795bb5c02a650fd6490e625426f7a65018b8c7c45b8f8982",
+    "generated_at": "2026-09-15T13:06:45+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:07:10+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:07:10+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:07:11+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:07:10+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:07:11+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:07:11+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:07:11+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:07:11+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:07:11+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:07:11+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:07:12+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:07:11+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:07:12+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:07:12+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:11:59+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:07:12+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:11:59+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:11:59+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:11:59+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:11:59+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:11:59+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "f726492faaa536796d75e4e866634d75f7271e70ad8b0d9079ac739e6bcec224",
+    "generated_at": "2026-09-15T13:11:59+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:12:00+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "91802034e9fc6b93a006d1af72b20dcc1d4e141f2350f0f907aae6d3d2939e5a",
+    "generated_at": "2026-09-15T13:11:59+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:12:00+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "33787f32c46d65bbda34c190102dfd4a9dcd80d0578193dff05ce70a628aa0cf",
+    "generated_at": "2026-09-15T13:12:00+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:12:01+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c843ca553c68bf4f7b388819e3a0486cfb404de150dfa5f3eb86253b941bcf45",
+    "generated_at": "2026-09-15T13:12:00+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:12:01+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "68d85732f29b60557d0aca34d7d3c98237518310de1dc3f334a6f67affb702e1",
+    "generated_at": "2026-09-15T13:12:01+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:12:02+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "9b6d54b6d4be5c3cba566c3f68f8ffeb9a352279baf4ac1c7ec824a82b69ddf8",
+    "generated_at": "2026-09-15T13:12:01+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:12:02+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "eca3383827c2c4e6fa9124909742d07719cca30c92d3a2d99bb91cddc464ba6c",
+    "generated_at": "2026-09-15T13:12:02+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:12:26+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c28fc7f1bceceee0795bb5c02a650fd6490e625426f7a65018b8c7c45b8f8982",
+    "generated_at": "2026-09-15T13:12:02+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:12:26+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:12:26+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:12:26+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:12:26+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:12:26+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:12:26+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:12:27+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:12:26+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:12:27+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:12:27+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:12:27+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:12:27+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:12:28+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:12:27+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:18:52+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:12:28+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:18:52+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:18:52+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:18:53+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:18:52+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:18:53+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "f726492faaa536796d75e4e866634d75f7271e70ad8b0d9079ac739e6bcec224",
+    "generated_at": "2026-09-15T13:18:53+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:18:54+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "91802034e9fc6b93a006d1af72b20dcc1d4e141f2350f0f907aae6d3d2939e5a",
+    "generated_at": "2026-09-15T13:18:53+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:18:54+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "33787f32c46d65bbda34c190102dfd4a9dcd80d0578193dff05ce70a628aa0cf",
+    "generated_at": "2026-09-15T13:18:54+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:18:54+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c843ca553c68bf4f7b388819e3a0486cfb404de150dfa5f3eb86253b941bcf45",
+    "generated_at": "2026-09-15T13:18:54+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:18:54+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "68d85732f29b60557d0aca34d7d3c98237518310de1dc3f334a6f67affb702e1",
+    "generated_at": "2026-09-15T13:18:54+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:18:55+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "9b6d54b6d4be5c3cba566c3f68f8ffeb9a352279baf4ac1c7ec824a82b69ddf8",
+    "generated_at": "2026-09-15T13:18:54+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:18:55+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "eca3383827c2c4e6fa9124909742d07719cca30c92d3a2d99bb91cddc464ba6c",
+    "generated_at": "2026-09-15T13:18:55+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:19:20+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c28fc7f1bceceee0795bb5c02a650fd6490e625426f7a65018b8c7c45b8f8982",
+    "generated_at": "2026-09-15T13:18:55+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:19:20+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:19:20+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:19:21+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:19:20+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:19:21+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:19:21+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:19:22+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:19:21+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:19:22+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:19:22+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:19:22+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:19:22+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:19:22+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:19:22+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:20:41+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:19:22+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:20:41+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:20:41+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:20:42+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:20:41+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:20:42+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "f726492faaa536796d75e4e866634d75f7271e70ad8b0d9079ac739e6bcec224",
+    "generated_at": "2026-09-15T13:20:42+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:20:43+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "91802034e9fc6b93a006d1af72b20dcc1d4e141f2350f0f907aae6d3d2939e5a",
+    "generated_at": "2026-09-15T13:20:42+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:20:43+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "33787f32c46d65bbda34c190102dfd4a9dcd80d0578193dff05ce70a628aa0cf",
+    "generated_at": "2026-09-15T13:20:43+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:20:44+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c843ca553c68bf4f7b388819e3a0486cfb404de150dfa5f3eb86253b941bcf45",
+    "generated_at": "2026-09-15T13:20:43+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:20:44+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "68d85732f29b60557d0aca34d7d3c98237518310de1dc3f334a6f67affb702e1",
+    "generated_at": "2026-09-15T13:20:44+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:20:44+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "9b6d54b6d4be5c3cba566c3f68f8ffeb9a352279baf4ac1c7ec824a82b69ddf8",
+    "generated_at": "2026-09-15T13:20:44+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:20:44+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "eca3383827c2c4e6fa9124909742d07719cca30c92d3a2d99bb91cddc464ba6c",
+    "generated_at": "2026-09-15T13:20:44+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:21:09+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c28fc7f1bceceee0795bb5c02a650fd6490e625426f7a65018b8c7c45b8f8982",
+    "generated_at": "2026-09-15T13:20:44+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:21:09+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:21:09+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:21:10+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:21:09+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:21:10+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:21:10+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:21:10+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:21:10+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:21:11+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:21:10+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:21:11+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:21:11+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:21:11+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:21:11+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:22:58+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:21:11+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:22:58+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:22:58+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:22:58+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:22:58+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:22:58+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "f726492faaa536796d75e4e866634d75f7271e70ad8b0d9079ac739e6bcec224",
+    "generated_at": "2026-09-15T13:22:58+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:22:58+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "91802034e9fc6b93a006d1af72b20dcc1d4e141f2350f0f907aae6d3d2939e5a",
+    "generated_at": "2026-09-15T13:22:58+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:22:58+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "33787f32c46d65bbda34c190102dfd4a9dcd80d0578193dff05ce70a628aa0cf",
+    "generated_at": "2026-09-15T13:22:58+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:22:59+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c843ca553c68bf4f7b388819e3a0486cfb404de150dfa5f3eb86253b941bcf45",
+    "generated_at": "2026-09-15T13:22:58+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:22:59+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "68d85732f29b60557d0aca34d7d3c98237518310de1dc3f334a6f67affb702e1",
+    "generated_at": "2026-09-15T13:22:59+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:22:59+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "9b6d54b6d4be5c3cba566c3f68f8ffeb9a352279baf4ac1c7ec824a82b69ddf8",
+    "generated_at": "2026-09-15T13:22:59+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:22:59+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "eca3383827c2c4e6fa9124909742d07719cca30c92d3a2d99bb91cddc464ba6c",
+    "generated_at": "2026-09-15T13:22:59+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:23:20+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c28fc7f1bceceee0795bb5c02a650fd6490e625426f7a65018b8c7c45b8f8982",
+    "generated_at": "2026-09-15T13:22:59+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:23:20+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:23:20+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:23:20+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:23:20+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:23:21+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:23:20+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:23:21+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:23:21+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:23:21+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:23:21+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:23:22+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:23:21+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T13:23:22+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T13:23:22+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:29+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T13:23:22+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:30+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:35:29+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:30+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:35:30+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:30+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "f726492faaa536796d75e4e866634d75f7271e70ad8b0d9079ac739e6bcec224",
+    "generated_at": "2026-09-15T15:35:30+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:31+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "91802034e9fc6b93a006d1af72b20dcc1d4e141f2350f0f907aae6d3d2939e5a",
+    "generated_at": "2026-09-15T15:35:30+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:31+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "33787f32c46d65bbda34c190102dfd4a9dcd80d0578193dff05ce70a628aa0cf",
+    "generated_at": "2026-09-15T15:35:31+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:31+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c843ca553c68bf4f7b388819e3a0486cfb404de150dfa5f3eb86253b941bcf45",
+    "generated_at": "2026-09-15T15:35:31+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:31+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "68d85732f29b60557d0aca34d7d3c98237518310de1dc3f334a6f67affb702e1",
+    "generated_at": "2026-09-15T15:35:31+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:32+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "9b6d54b6d4be5c3cba566c3f68f8ffeb9a352279baf4ac1c7ec824a82b69ddf8",
+    "generated_at": "2026-09-15T15:35:31+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:32+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "eca3383827c2c4e6fa9124909742d07719cca30c92d3a2d99bb91cddc464ba6c",
+    "generated_at": "2026-09-15T15:35:32+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:55+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c28fc7f1bceceee0795bb5c02a650fd6490e625426f7a65018b8c7c45b8f8982",
+    "generated_at": "2026-09-15T15:35:32+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:55+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:35:55+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:55+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:35:55+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:55+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:35:55+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:56+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:35:55+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:56+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:35:56+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:56+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:35:56+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:35:56+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:35:56+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:36:58+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:35:56+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:36:58+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:36:58+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:36:59+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:36:58+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:36:59+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "f726492faaa536796d75e4e866634d75f7271e70ad8b0d9079ac739e6bcec224",
+    "generated_at": "2026-09-15T15:36:59+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:36:59+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "91802034e9fc6b93a006d1af72b20dcc1d4e141f2350f0f907aae6d3d2939e5a",
+    "generated_at": "2026-09-15T15:36:59+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:36:59+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "33787f32c46d65bbda34c190102dfd4a9dcd80d0578193dff05ce70a628aa0cf",
+    "generated_at": "2026-09-15T15:36:59+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:37:00+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c843ca553c68bf4f7b388819e3a0486cfb404de150dfa5f3eb86253b941bcf45",
+    "generated_at": "2026-09-15T15:36:59+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:37:00+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "68d85732f29b60557d0aca34d7d3c98237518310de1dc3f334a6f67affb702e1",
+    "generated_at": "2026-09-15T15:37:00+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:37:01+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "9b6d54b6d4be5c3cba566c3f68f8ffeb9a352279baf4ac1c7ec824a82b69ddf8",
+    "generated_at": "2026-09-15T15:37:00+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:37:01+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "eca3383827c2c4e6fa9124909742d07719cca30c92d3a2d99bb91cddc464ba6c",
+    "generated_at": "2026-09-15T15:37:01+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:37:24+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c28fc7f1bceceee0795bb5c02a650fd6490e625426f7a65018b8c7c45b8f8982",
+    "generated_at": "2026-09-15T15:37:01+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:37:24+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:37:24+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:37:25+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:37:24+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:37:25+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:37:25+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:37:25+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:37:25+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:37:25+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:37:25+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:37:26+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:37:25+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:37:26+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:37:26+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:39:40+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:37:26+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:39:40+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:39:40+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:39:40+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:39:40+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:39:40+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "f726492faaa536796d75e4e866634d75f7271e70ad8b0d9079ac739e6bcec224",
+    "generated_at": "2026-09-15T15:39:40+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:39:41+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "91802034e9fc6b93a006d1af72b20dcc1d4e141f2350f0f907aae6d3d2939e5a",
+    "generated_at": "2026-09-15T15:39:40+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:39:41+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "33787f32c46d65bbda34c190102dfd4a9dcd80d0578193dff05ce70a628aa0cf",
+    "generated_at": "2026-09-15T15:39:41+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:39:41+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c843ca553c68bf4f7b388819e3a0486cfb404de150dfa5f3eb86253b941bcf45",
+    "generated_at": "2026-09-15T15:39:41+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:39:41+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "68d85732f29b60557d0aca34d7d3c98237518310de1dc3f334a6f67affb702e1",
+    "generated_at": "2026-09-15T15:39:41+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:39:42+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "9b6d54b6d4be5c3cba566c3f68f8ffeb9a352279baf4ac1c7ec824a82b69ddf8",
+    "generated_at": "2026-09-15T15:39:41+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:39:42+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "eca3383827c2c4e6fa9124909742d07719cca30c92d3a2d99bb91cddc464ba6c",
+    "generated_at": "2026-09-15T15:39:42+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:40:04+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c28fc7f1bceceee0795bb5c02a650fd6490e625426f7a65018b8c7c45b8f8982",
+    "generated_at": "2026-09-15T15:39:42+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:40:04+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:40:04+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:40:05+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:40:04+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:40:05+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:40:05+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:40:05+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:40:05+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:40:05+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:40:05+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:40:06+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:40:05+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:40:06+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:40:06+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:41:33+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:40:06+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:41:33+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:41:33+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:41:34+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:41:33+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:41:34+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "f726492faaa536796d75e4e866634d75f7271e70ad8b0d9079ac739e6bcec224",
+    "generated_at": "2026-09-15T15:41:34+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:41:34+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# chatgpt checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "91802034e9fc6b93a006d1af72b20dcc1d4e141f2350f0f907aae6d3d2939e5a",
+    "generated_at": "2026-09-15T15:41:34+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "chatgpt",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:41:34+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "33787f32c46d65bbda34c190102dfd4a9dcd80d0578193dff05ce70a628aa0cf",
+    "generated_at": "2026-09-15T15:41:34+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:41:35+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# manus checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c843ca553c68bf4f7b388819e3a0486cfb404de150dfa5f3eb86253b941bcf45",
+    "generated_at": "2026-09-15T15:41:34+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "manus",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:41:35+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "68d85732f29b60557d0aca34d7d3c98237518310de1dc3f334a6f67affb702e1",
+    "generated_at": "2026-09-15T15:41:35+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:41:36+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# opencode checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "9b6d54b6d4be5c3cba566c3f68f8ffeb9a352279baf4ac1c7ec824a82b69ddf8",
+    "generated_at": "2026-09-15T15:41:35+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "opencode",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:41:36+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "eca3383827c2c4e6fa9124909742d07719cca30c92d3a2d99bb91cddc464ba6c",
+    "generated_at": "2026-09-15T15:41:36+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:42:00+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# cline checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "c28fc7f1bceceee0795bb5c02a650fd6490e625426f7a65018b8c7c45b8f8982",
+    "generated_at": "2026-09-15T15:41:36+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "cline",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:42:00+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:42:00+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:42:00+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:42:00+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:42:00+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:42:00+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:42:01+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:42:00+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:42:01+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:42:01+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:42:01+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "7c137f96e9c69d845007ca4c81907602562953184de169158a720fde4d03fb34",
+    "generated_at": "2026-09-15T15:42:01+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective v2"
+  },
+  "state": {
+    "objective": "integration objective v2",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---
+
+## Checkpoint 2026-09-15T15:42:01+00:00
+
+- project: (unknown)
+- branch: (none)
+- commit: (none)
+
+Previous `docs/HANDOFF.md` content (replaced by this checkpoint):
+
+# claude checkpoint
+
+```handoff-protocol
+{
+  "protocol": {
+    "name": "universal-handoff-protocol",
+    "version": 1
+  },
+  "identity": {
+    "id": "550f4b6f21db5448ff6a614be11db756e295d48a36788d92c7b615eb39758fe5",
+    "generated_at": "2026-09-15T15:42:01+00:00",
+    "sequence": 0
+  },
+  "metadata": {
+    "project": {
+      "name": "claude",
+      "type": ""
+    },
+    "objective": "integration objective"
+  },
+  "state": {
+    "objective": "integration objective",
+    "completed": [],
+    "in_progress": [],
+    "next_actions": [],
+    "decisions": [],
+    "constraints": []
+  },
+  "validation": {
+    "status": "pending",
+    "checks": []
+  },
+  "git": {
+    "branch": null,
+    "head": null,
+    "clean": null,
+    "status": null
+  },
+  "artifacts": [],
+  "risks": []
+}
+```
+
+---

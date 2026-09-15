@@ -2,7 +2,18 @@
 
 import os
 import subprocess
+import sys
 from pathlib import Path
+
+# Ensure ``handoff_agent`` is importable in subprocesses spawned by tests
+# (e.g. CliAdapter) even when the working directory changes to a temporary
+# repository.  The absolute path avoids PYTHONPATH breakage from relative
+# ``src`` references.
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+_src_dir = str(_PROJECT_ROOT / "src")
+if _src_dir not in sys.path[:1]:
+    sys.path.insert(0, _src_dir)
+os.environ["PYTHONPATH"] = _src_dir
 
 
 def git(repo: Path, *args: str) -> subprocess.CompletedProcess:
