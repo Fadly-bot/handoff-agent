@@ -40,6 +40,7 @@ from handoff_agent.capability import (
     is_known_capability,
 )
 from handoff_agent.integration import run_integration_suite, resolve_credentials
+from conftest import init_repo
 from handoff_agent.mcp.adapter import HandoffMCPAdapter
 from handoff_agent.mcp.server import MCPServer
 from handoff_agent.persistence import HandoffPersistenceError, _atomic_write_file
@@ -322,12 +323,16 @@ class TestErrorTaxonomyAudit:
         assert "ANTHROPIC_API_KEY" in text
         assert SECRET_LIKE not in text
 
-    def test_integration_suite_never_serializes_secret_values(self) -> None:
+    def test_integration_suite_never_serializes_secret_values(self, tmp_path: Path) -> None:
         env = {"ANTHROPIC_API_KEY": SECRET_LIKE, "OPENAI_API_KEY": SECRET_LIKE}
         cred = resolve_credentials(next(s for s in PLATFORM_SPECS.values() if s.auth_env == "ANTHROPIC_API_KEY"), env)
         assert cred.env_var == "ANTHROPIC_API_KEY"
         assert cred.present is True
-        report = run_integration_suite(mode="mock", env=env)
+        repo = tmp_path / "repo"
+        init_repo(repo)
+        report = run_integration_suite(
+            mode="mock", env=env, project_root=str(repo)
+        )
         blob = json.dumps(report)
         assert SECRET_LIKE not in blob
         assert "sk-" not in blob

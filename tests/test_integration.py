@@ -178,31 +178,45 @@ class TestCertification:
 
 
 class TestLiveSeparation:
-    def test_mock_mode_sets_live_case_skipped(self) -> None:
-        report = run_platform_certification(get_platform_spec("claude"))
+    def test_mock_mode_sets_live_case_skipped(self, tmp_path: Path) -> None:
+        repo = tmp_path / "repo"
+        init_repo(repo)
+        report = run_platform_certification(
+            get_platform_spec("claude"), project_root=str(repo)
+        )
         live_cases = [c for c in report.cases if c.check == "live.api"]
         assert live_cases and live_cases[0].status == "skipped"
         assert live_cases[0].live is True
 
-    def test_live_mode_without_key_is_skipped(self) -> None:
+    def test_live_mode_without_key_is_skipped(self, tmp_path: Path) -> None:
+        repo = tmp_path / "repo"
+        init_repo(repo)
         report = run_platform_certification(
-            get_platform_spec("claude"), mode=LIVE_MODE, env={}
+            get_platform_spec("claude"),
+            mode=LIVE_MODE,
+            env={},
+            project_root=str(repo),
         )
         live_cases = [c for c in report.cases if c.check == "live.api"]
         assert live_cases[0].status == "skipped"
 
-    def test_live_mode_without_gate_env_is_skipped(self, monkeypatch) -> None:
+    def test_live_mode_without_gate_env_is_skipped(self, monkeypatch, tmp_path: Path) -> None:
+        repo = tmp_path / "repo"
+        init_repo(repo)
         monkeypatch.setenv(LIVE_TESTS_ENV, "0")
         report = run_platform_certification(
             get_platform_spec("claude"),
             mode=LIVE_MODE,
             env={"ANTHROPIC_API_KEY": "sk-live"},
+            project_root=str(repo),
         )
         live_cases = [c for c in report.cases if c.check == "live.api"]
         assert live_cases[0].status == "skipped"
         assert "sk-live" not in str(report.to_dict())
 
-    def test_live_call_failure_is_deterministic_and_never_leaks(self, monkeypatch) -> None:
+    def test_live_call_failure_is_deterministic_and_never_leaks(self, monkeypatch, tmp_path: Path) -> None:
+        repo = tmp_path / "repo"
+        init_repo(repo)
         monkeypatch.setenv(LIVE_TESTS_ENV, "1")
         secret = "sk-live-boundary-0"
         with mock.patch(
@@ -213,6 +227,7 @@ class TestLiveSeparation:
                 get_platform_spec("claude"),
                 mode=LIVE_MODE,
                 env={"ANTHROPIC_API_KEY": secret},
+                project_root=str(repo),
             )
         live_cases = [c for c in report.cases if c.check == "live.api"]
         assert live_cases[0].status == "failed"

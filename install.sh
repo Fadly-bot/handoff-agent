@@ -88,7 +88,16 @@ fi
 
 info "Setting up Python virtual environment..."
 if [ ! -d "$INSTALL_DIR/venv" ]; then
-    "$PYTHON" -m venv "$INSTALL_DIR/venv"
+    if "$PYTHON" -c "import ensurepip" >/dev/null 2>&1; then
+        "$PYTHON" -m venv "$INSTALL_DIR/venv"
+    else
+        "$PYTHON" - "$INSTALL_DIR/venv" <<'PYEOF'
+import sys
+from venv import EnvBuilder
+EnvBuilder(with_pip=False).create(sys.argv[1])
+PYEOF
+        warn "ensurepip unavailable: created a stdlib-only virtual environment (no embedded package installer). Runtime has no third-party dependencies."
+    fi
 fi
 
 # NOTE: the runtime depends only on the Python standard library, so there are
