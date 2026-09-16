@@ -59,9 +59,17 @@ class PromptBuilder:
         lines.append(f"- head commit: {context.git.head or '(none)'}")
         lines.append(f"- working tree: {'clean' if context.git.clean else context.git.status}")
         lines.append("")
-        if context.git.untracked_files:
-            lines.append(f"- untracked files ({len(context.git.untracked_files)}):")
-            for f in context.git.untracked_files:
+        # Only list untracked files that survived the SecurityFilter. Raw
+        # names like ``.env`` or ``id_rsa`` are sensitive metadata and must
+        # never reach the AI provider.
+        safe_untracked = tuple(
+            f.path
+            for f in context.files
+            if f.path in set(context.git.untracked_files)
+        )
+        if safe_untracked:
+            lines.append(f"- untracked files ({len(safe_untracked)}):")
+            for f in safe_untracked:
                 lines.append(f"    - {f}")
             lines.append("")
         if context.git.recent_commits:

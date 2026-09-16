@@ -93,7 +93,15 @@ class FullContext:
     security: SecurityInfo
 
     def to_dict(self) -> dict[str, object]:
-        """Serialization-friendly dict (no secrets)."""
+        """Serialization-friendly dict (no secrets, no sensitive paths).
+
+        Raw untracked-file names can themselves be sensitive metadata
+        (``.env``, ``id_rsa``), so the serialized form lists only paths that
+        survived the SecurityFilter (i.e. appear in ``self.files``).
+        """
+        safe_untracked = tuple(
+            f.path for f in self.files if f.path in set(self.git.untracked_files)
+        )
         return {
             "project": {
                 "root": self.project.root,
@@ -106,7 +114,7 @@ class FullContext:
                 "clean": self.git.clean,
                 "status": self.git.status,
                 "modified_files": self.git.modified_files,
-                "untracked_files": self.git.untracked_files,
+                "untracked_files": safe_untracked,
                 "staged_files": self.git.staged_files,
                 "deleted_files": self.git.deleted_files,
                 "recent_commits": self.git.recent_commits,

@@ -168,10 +168,15 @@ class TestGitMetadata:
         assert "(detached)" in prompt
 
     def test_untracked_files_listed(self) -> None:
-        ctx = _make_context(untracked_files=("new.py", "temp.log"))
+        # Only untracked files that survived the SecurityFilter (present in
+        # context.files) may be listed in the prompt; raw names are dropped.
+        ctx = _make_context(
+            files=[_file("new.py", "x = 1")],
+            untracked_files=("new.py", ".env"),
+        )
         prompt = PromptBuilder().build_user(ctx)
         assert "new.py" in prompt
-        assert "temp.log" in prompt
+        assert ".env" not in prompt
 
     def test_recent_commits_present(self) -> None:
         commits = (

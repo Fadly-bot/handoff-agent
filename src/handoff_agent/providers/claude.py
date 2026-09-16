@@ -99,9 +99,15 @@ class ClaudeProvider(ProviderAdapter):
         return bool(self._read_api_key())
 
     def _read_api_key(self) -> str | None:
-        """Read the API key from the environment (never logs it)."""
+        """Read the API key from the environment (never logs it).
+
+        A blank or whitespace-only value counts as missing so an invalid
+        key cannot silently pass the configured check.
+        """
         key = os.environ.get(self.api_key_env)
-        return key if key else None
+        if not key or not key.strip():
+            return None
+        return key
 
     def generate(self, context: "FullContext", prompt: str) -> str:
         """Send the prompt to Anthropic and return the assistant text.

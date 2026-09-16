@@ -1,5 +1,11 @@
 # Development Company F — Baseline (revised roadmap)
 
+**Adopted existing project:** this repository was **not** created by Handoff
+from scratch. Development Company F was adopted onto an existing, previously
+greenfield-managed codebase that already had its own git history, test suite,
+and Phase 1–29 checkpoint lineage (Phase 1–29 predate the Company F roadmap).
+This baseline records the actual project state at adoption time.
+
 Status: **PASS**.
 
 ## Repository audit performed

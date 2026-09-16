@@ -20,17 +20,19 @@ def _provider_status_line(provider_name: str, config: dict) -> str:
     """Return a diagnostic line for a provider without revealing the API key."""
     providers_cfg = config.get("providers", {})
     pcfg = providers_cfg.get(provider_name, {})
+    model_display: str = "(default)"
     try:
         p = create_provider(provider_name, pcfg)
+    except Exception:
+        status = "not installed"
+    else:
+        model_display = getattr(p, "model", "") or "(default)"
         if not p.is_configured():
             status = "missing API key"
         elif not p.validate_config(pcfg):
             status = "invalid config"
         else:
             status = "configured"
-    except Exception:
-        status = "not installed"
-    model_display = getattr(p, "model", "") or "(default)"
     return f"  {provider_name}: {status}  [model: {model_display}]"
 
 
@@ -83,7 +85,15 @@ def cmd_inspect(args: argparse.Namespace) -> int:
 def cmd_config(args: argparse.Namespace) -> int:
     """Show provider configuration status."""
     config_path = Path(args.config) if args.config else None
-    config = load_config(config_path)
+    try:
+        config = load_config(config_path)
+    except RuntimeError as exc:
+        # Corrupt/unreadable config: fail safely with a clear error and a
+        # non-zero exit code. The message never contains file contents.
+        print(f"[handoff] error: config could not be loaded", file=sys.stderr)
+        print(f"[handoff] hint: fix or remove the config file and re-run", file=sys.stderr)
+        print(f"[handoff] detail: {exc}", file=sys.stderr)
+        return 1
     print("[handoff] Provider status")
     for pname in available_providers():
         print(_provider_status_line(pname, config))
