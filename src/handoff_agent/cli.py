@@ -157,16 +157,20 @@ def build_parser() -> argparse.ArgumentParser:
             "  handoff config             Show provider configuration status\n"
             "  handoff mcp                Run the Handoff MCP server over stdio\n"
             "  handoff registry           Show agent registry status; use --registry-action list\n"
-            "  handoff --commit           Generate, then commit ONLY docs/HANDOFF.md (never pushes)\n"
+            "  handoff ops health        Operations: system health (CLI/API/MCP identical)\n"
+            "  handoff ops --json health Emit stable JSON (secret-safe)\n"
+            "  handoff --commit          Generate, then commit ONLY docs/HANDOFF.md (never pushes)\n"
         ),
     )
     parser.add_argument(
         "command",
         nargs="?",
-        choices=["inspect", "config", "mcp", "registry", "telemetry"],
+        choices=["inspect", "config", "mcp", "registry", "telemetry", "ops"],
         help="Subcommand. 'inspect' shows project + git state. 'config' shows provider status. "
         "'mcp' runs the Handoff MCP server over stdio. 'registry' shows agent registry status. "
-        "'telemetry' shows telemetry diagnostics.",
+        "'telemetry' shows telemetry diagnostics. 'ops' runs the operations interface "
+        "(health/status/doctor/trace/audit/checkpoint/workflow/agent/policy-explain/tool/"
+        "remote/sync/recovery/compatibility/conformance).",
     )
     parser.add_argument(
         "--registry-action",
@@ -559,6 +563,10 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_registry(args)
     if args.command == "telemetry":
         return cmd_telemetry(args)
+    if args.command == "ops":
+        from handoff_agent.ops import run_ops_cli
+
+        return run_ops_cli(argv)
     return cmd_generate(args)
 
 
