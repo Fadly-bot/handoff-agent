@@ -129,7 +129,7 @@ Diubah: `src/handoff_agent/cli.py` (subcommand `ops`).
 
 ## 16. Push status
 
-Diisi setelah push (docs commit menyusul).
+Pushed. Docs commit: `84c58fa` — `docs(phase-35): record ops, compatibility, and developer experience guide`.
 
 ## 17. Rekomendasi / blocker untuk phase berikutnya
 
