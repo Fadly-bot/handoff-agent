@@ -45,6 +45,11 @@ class TelemetryDomain(str, Enum):
     SYSTEM = "system"
     POLICY = "policy"
     TOOL = "tool"
+    PROJECT = "project"
+    DECISION = "decision"
+    WORKORDER = "workorder"
+    QUALITY = "quality"
+    DEPLOYMENT = "deployment"
 
 
 class TelemetryStatus(str, Enum):
@@ -109,6 +114,9 @@ _SECRET_VALUE_PATTERNS: tuple[re.Pattern[str], ...] = (
     re.compile(r"""(?i)\bgh[pousr]_[a-z0-9]{20,}"""),
     re.compile(r"""(?i)\bak-[a-z0-9]{20,}"""),
     re.compile(r"""(?i)xox[baprs]-[a-z0-9\-]{10,}"""),
+    re.compile(r"""(?i)\btoken\b\s*['"]?\s*[:=]\s*['"]?[a-z0-9_\-\.]{16,}"""),
+    re.compile(r"""(?i)(?:private[_\-]?key)\s*['"]?\s*[:=]"""),
+    re.compile(r"""['"](?:ghp_[a-z0-9]{36,}|sk-[a-z0-9]{20,}|xox[bpsar]-[a-z0-9\-]{10,})"""),
     re.compile(r"""-----BEGIN (?:RSA |EC |DSA )?PRIVATE KEY-----.*-----END (?:RSA |EC |DSA )?PRIVATE KEY-----""", re.DOTALL),
 )
 
@@ -990,6 +998,8 @@ class TelemetryCollector:
             )
             for old in oldest[: len(self._traces) - self.retention.max_traces]:
                 self._traces.pop(old.trace_id, None)
+                for span in old.spans:
+                    self._spans.pop(span.span_id, None)
 
     def _record_span_event(self, event: TelemetryEvent) -> None:
         span = self._spans.get(event.span_id)

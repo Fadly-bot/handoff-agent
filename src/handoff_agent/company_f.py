@@ -39,6 +39,13 @@ from pathlib import Path
 from typing import Any, Iterable
 
 from handoff_agent.persistence import _contains_secret_like_content
+from handoff_agent.telemetry import (
+    TelemetryDomain,
+    TelemetryStatus,
+    emit_event,
+    make_trace_id,
+    start_trace_span,
+)
 
 
 def new_id(prefix: str) -> str:
@@ -398,7 +405,12 @@ class CompanyFCoordinator:
     loses a work order.
     """
 
-    def __init__(self, state_dir: str | Path | None = None) -> None:
+    def __init__(
+        self,
+        state_dir: str | Path | None = None,
+        *,
+        tracer: Any | None = None,
+    ) -> None:
         self.state_dir = Path(state_dir) if state_dir else None
         self._lock = threading.RLock()
         self._projects: dict[str, ProjectIdentity] = {}
@@ -411,6 +423,9 @@ class CompanyFCoordinator:
         self._quality_gates: dict[str, QualityGateResult] = {}
         self._deployment_gates: dict[str, DeploymentGateResult] = {}
         self._audit: list[AuditEvidence] = []
+        self._tracer = tracer
+        self._project_trace_ids: dict[str, str] = {}
+        self._project_span_ids: dict[str, str] = {}
         if self.state_dir:
             self.load()
 
@@ -419,6 +434,15 @@ class CompanyFCoordinator:
     def register_project(self, project: ProjectIdentity) -> str:
         with self._lock:
             self._projects[project.project_id] = project
+            self._trace(
+                domain=TelemetryDomain.PROJECT.value,
+                operation="project.register",
+                status=TelemetryStatus.OK.value,
+                project_id=project.project_id,
+                resource=project.project_id,
+                actor="system",
+                metadata={"name": project.name, "root": project.root},
+            )
             return project.project_id
 
     def register_role(self, identity: RoleIdentity) -> str:
@@ -468,6 +492,49 @@ class CompanyFCoordinator:
         )
         self._audit.append(evt)
         return evt
+
+    def _trace_project(self, project_id: str) -> tuple[str, str]:
+        if project_id not in self._project_trace_ids:
+            trace_id = make_trace_id()
+            span_id = start_trace_span(
+                self._tracer,
+                domain=TelemetryDomain.PROJECT.value,
+                operation="project.trace",
+                resource=project_id,
+                trace_id=trace_id,
+                actor="coordinator",
+            )
+            self._project_trace_ids[project_id] = trace_id
+            self._project_span_ids[project_id] = span_id
+        return self._project_trace_ids[project_id], self._project_span_ids[project_id]
+
+    def _trace(
+        self,
+        *,
+        domain: str,
+        operation: str,
+        status: str = TelemetryStatus.OK.value,
+        project_id: str = "",
+        resource: str = "",
+        actor: str = "system",
+        metadata: dict[str, Any] | None = None,
+    ) -> None:
+        if self._tracer is None:
+            return
+        trace_id, parent_span_id = "", ""
+        if project_id and project_id in self._projects:
+            trace_id, parent_span_id = self._trace_project(project_id)
+        emit_event(
+            self._tracer,
+            domain=domain,
+            operation=operation,
+            status=status,
+            resource=resource or project_id,
+            actor=actor,
+            trace_id=trace_id,
+            parent_span_id=parent_span_id,
+            metadata=metadata,
+        )
 
     def _transition(
         self,
@@ -530,6 +597,27 @@ class CompanyFCoordinator:
                                 "conflicting decision requires review",
                             )
             self._decisions[decision.decision_id] = decision
+            self._trace(
+                domain=TelemetryDomain.DECISION.value,
+                operation="decision.make",
+                status=(
+                    TelemetryStatus.OK.value
+                    if status == DecisionStatus.GO
+                    else TelemetryStatus.BLOCKED.value
+                ),
+                project_id=project_id,
+                resource=project_id,
+                actor=role.agent_id,
+                metadata={
+                    "decision_id": decision.decision_id,
+                    "status": status.value,
+                    "conflict": any(
+                        wo.status == WorkOrderStatus.CONFLICT
+                        for wo in self._work_orders.values()
+                        if wo.project_id == project_id
+                    ),
+                },
+            )
             return decision
 
     def _active_go(self, project_id: str) -> bool:
@@ -610,6 +698,19 @@ class CompanyFCoordinator:
                 WorkOrderStatus.PENDING.value,
                 "work order registered after GO decision",
             )
+            self._trace(
+                domain=TelemetryDomain.WORKORDER.value,
+                operation="workorder.create",
+                status=TelemetryStatus.OK.value,
+                project_id=project_id,
+                resource=work_order.work_order_id,
+                actor=role.agent_id,
+                metadata={
+                    "work_order_id": work_order.work_order_id,
+                    "decision_id": decision.decision_id,
+                    "approval_required": approval_required,
+                },
+            )
             return work_order
 
     def get_work_order(self, work_order_id: str) -> WorkOrder | None:
@@ -651,6 +752,19 @@ class CompanyFCoordinator:
                 "plan.attached",
                 "plan and risk register attached",
             )
+            self._trace(
+                domain=TelemetryDomain.WORKORDER.value,
+                operation="workorder.plan",
+                status=TelemetryStatus.OK.value,
+                project_id=work_order.project_id,
+                resource=work_order.work_order_id,
+                actor=role.agent_id,
+                metadata={
+                    "work_order_id": work_order.work_order_id,
+                    "strategy": strategy,
+                    "risk_count": len(plan.risks),
+                },
+            )
             return plan
 
     def approve_work_order(
@@ -674,6 +788,18 @@ class CompanyFCoordinator:
                 work_order.status.value,
                 work_order.status.value,
                 note or "human approval granted",
+            )
+            self._trace(
+                domain=TelemetryDomain.WORKORDER.value,
+                operation="workorder.approve",
+                status=TelemetryStatus.OK.value,
+                project_id=work_order.project_id,
+                resource=work_order.work_order_id,
+                actor=role.agent_id,
+                metadata={
+                    "work_order_id": work_order.work_order_id,
+                    "approval_satisfied": True,
+                },
             )
             return work_order.approval
 
@@ -715,6 +841,19 @@ class CompanyFCoordinator:
                 role.agent_id,
                 "work_order.assigned",
                 f"assigned to {agent.agent_id} after capability verification",
+            )
+            self._trace(
+                domain=TelemetryDomain.WORKORDER.value,
+                operation="workorder.assign",
+                status=TelemetryStatus.OK.value,
+                project_id=work_order.project_id,
+                resource=work_order.work_order_id,
+                actor=role.agent_id,
+                metadata={
+                    "work_order_id": work_order.work_order_id,
+                    "agent_id": agent.agent_id,
+                    "capabilities_verified": sorted(work_order.required_capabilities),
+                },
             )
             return agent.agent_id
 
@@ -796,6 +935,19 @@ class CompanyFCoordinator:
                 "checkpoint.accepted",
                 "handoff accepted valid checkpoint",
             )
+            self._trace(
+                domain=TelemetryDomain.WORKORDER.value,
+                operation="workorder.checkpoint",
+                status=TelemetryStatus.OK.value,
+                project_id=work_order.project_id,
+                resource=work_order.work_order_id,
+                actor=role.agent_id,
+                metadata={
+                    "work_order_id": work_order.work_order_id,
+                    "checkpoint_id": checkpoint.checkpoint_id,
+                    "consumer": consumer or "",
+                },
+            )
             return checkpoint
 
     def evaluate_handoff(
@@ -812,13 +964,37 @@ class CompanyFCoordinator:
             if checkpoint.work_order_id not in {
                 cp.work_order_id for cp in self._checkpoints.values()
             }:
-                return HandoffVerdict.REJECT
-            work_order = self._require_work_order(checkpoint.work_order_id)
-            if checkpoint.owner != work_order.owner:
-                return HandoffVerdict.REJECT  # ownership mismatch
-            if checkpoint.state_check != CheckpointState.VALID:
-                return HandoffVerdict.REJECT
-            return HandoffVerdict.ACCEPT
+                verdict = HandoffVerdict.REJECT
+                handoff_project = ""
+            else:
+                work_order = self._require_work_order(checkpoint.work_order_id)
+                handoff_project = work_order.project_id
+                if checkpoint.owner != work_order.owner:
+                    verdict = HandoffVerdict.REJECT
+                elif checkpoint.state_check != CheckpointState.VALID:
+                    verdict = HandoffVerdict.REJECT
+                else:
+                    verdict = HandoffVerdict.ACCEPT
+            self._trace(
+                domain=TelemetryDomain.HANDOFF.value,
+                operation=(
+                    "handoff.accept" if verdict == HandoffVerdict.ACCEPT else "handoff.reject"
+                ),
+                status=(
+                    TelemetryStatus.OK.value
+                    if verdict == HandoffVerdict.ACCEPT
+                    else TelemetryStatus.BLOCKED.value
+                ),
+                project_id=handoff_project,
+                resource=checkpoint.work_order_id,
+                actor=role.agent_id,
+                metadata={
+                    "checkpoint_id": checkpoint.checkpoint_id,
+                    "verdict": verdict.value,
+                    "checkpoint_owner": checkpoint.owner,
+                },
+            )
+            return verdict
 
     # -- quality & deployment gates -------------------------------------
 
@@ -875,6 +1051,26 @@ class CompanyFCoordinator:
                     "quality.fail",
                     "quality failed — returning for rework",
                 )
+            self._trace(
+                domain=TelemetryDomain.QUALITY.value,
+                operation="quality.gate",
+                status=(
+                    TelemetryStatus.OK.value
+                    if verdict == QualityVerdict.PASS
+                    else TelemetryStatus.DEGRADED.value
+                    if verdict == QualityVerdict.REQUIRE_FIX
+                    else TelemetryStatus.ERROR.value
+                ),
+                project_id=work_order.project_id,
+                resource=work_order.work_order_id,
+                actor=role.agent_id,
+                metadata={
+                    "work_order_id": work_order.work_order_id,
+                    "gate_id": result.gate_id,
+                    "verdict": verdict.value,
+                    "issues": list(issues)[:10],
+                },
+            )
             return result
 
     def deployment_gate(
@@ -915,6 +1111,19 @@ class CompanyFCoordinator:
                 "deployment.gate",
                 "deployment approved with rollback readiness",
             )
+            self._trace(
+                domain=TelemetryDomain.DEPLOYMENT.value,
+                operation="deployment.gate",
+                status=TelemetryStatus.OK.value,
+                project_id=work_order.project_id,
+                resource=work_order.work_order_id,
+                actor=role.agent_id,
+                metadata={
+                    "work_order_id": work_order.work_order_id,
+                    "gate_id": result.gate_id,
+                    "rollback_ready": rollback_ready,
+                },
+            )
             return result
 
     def release(self, identity: RoleIdentity | str, work_order_id: str) -> WorkOrder:
@@ -934,6 +1143,15 @@ class CompanyFCoordinator:
                 role.agent_id,
                 "work_order.released",
                 "released to production",
+            )
+            self._trace(
+                domain=TelemetryDomain.WORKORDER.value,
+                operation="workorder.release",
+                status=TelemetryStatus.OK.value,
+                project_id=work_order.project_id,
+                resource=work_order.work_order_id,
+                actor=role.agent_id,
+                metadata={"work_order_id": work_order.work_order_id},
             )
             return work_order
 
@@ -955,6 +1173,15 @@ class CompanyFCoordinator:
                 "work_order.failed",
                 reason,
             )
+            self._trace(
+                domain=TelemetryDomain.WORKORDER.value,
+                operation="workorder.failed",
+                status=TelemetryStatus.ERROR.value,
+                project_id=work_order.project_id,
+                resource=work_order.work_order_id,
+                actor=role.agent_id,
+                metadata={"work_order_id": work_order.work_order_id},
+            )
             return work_order
 
     def reject(self, identity: RoleIdentity | str, work_order_id: str, reason: str) -> WorkOrder:
@@ -967,6 +1194,15 @@ class CompanyFCoordinator:
                 role.agent_id,
                 "work_order.rejected",
                 reason,
+            )
+            self._trace(
+                domain=TelemetryDomain.WORKORDER.value,
+                operation="workorder.reject",
+                status=TelemetryStatus.BLOCKED.value,
+                project_id=work_order.project_id,
+                resource=work_order.work_order_id,
+                actor=role.agent_id,
+                metadata={"work_order_id": work_order.work_order_id},
             )
             return work_order
 
@@ -981,6 +1217,15 @@ class CompanyFCoordinator:
                 "work_order.cancelled",
                 reason,
             )
+            self._trace(
+                domain=TelemetryDomain.WORKORDER.value,
+                operation="workorder.cancel",
+                status=TelemetryStatus.CANCELLED.value,
+                project_id=work_order.project_id,
+                resource=work_order.work_order_id,
+                actor=role.agent_id,
+                metadata={"work_order_id": work_order.work_order_id},
+            )
             return work_order
 
     def resume(self, identity: RoleIdentity | str, work_order_id: str) -> WorkOrder:
@@ -993,6 +1238,15 @@ class CompanyFCoordinator:
                 role.agent_id,
                 "work_order.resumed",
                 "recovered after failure or interruption",
+            )
+            self._trace(
+                domain=TelemetryDomain.WORKORDER.value,
+                operation="workorder.resume",
+                status=TelemetryStatus.RETRY.value,
+                project_id=work_order.project_id,
+                resource=work_order.work_order_id,
+                actor=role.agent_id,
+                metadata={"work_order_id": work_order.work_order_id},
             )
             return work_order
 
