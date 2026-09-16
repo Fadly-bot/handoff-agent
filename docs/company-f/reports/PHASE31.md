@@ -139,11 +139,11 @@ audit lama tetap untracked di luar scope.
 
 ## 15. Commit hash
 
-Disebutkan di output commit (hash final dicatat saat checkpoint).
+`9ea6ca4 feat(phase-31): observability, trace, and audit evidence`
 
 ## 16. Push status
 
-`git push origin master` sukses (akan tercatat).
+`git push origin master` sukses — `a90267d..9ea6ca4`.
 
 ## 17. Rekomendasi / blocker untuk phase berikutnya
 
