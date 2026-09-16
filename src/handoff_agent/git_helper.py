@@ -114,7 +114,12 @@ class GitRunner:
     cwd: str | None = None
     audit_log: list[str] = field(default_factory=list)
 
-    def _resolve_cmd(self, argv: Sequence[str]) -> list[str]:
+    def _resolve_cmd(self, argv: Sequence[str]) -> tuple[str, ...]:
+        """Validate *argv* and return the resolved subcommand as an immutable tuple.
+
+        Returning a tuple guarantees the validated command cannot be mutated
+        after the whitelist check (TOCTOU hardening).
+        """
         if not argv:
             raise GitCommandError("Empty git command.")
         if argv[0] == "git":
@@ -130,7 +135,7 @@ class GitRunner:
             raise GitForbiddenError(
                 f"Git subcommand '{sub}' is not whitelisted for read-only inspection."
             )
-        return argv
+        return tuple(argv)
 
     def run(self, argv: Sequence[str]) -> GitResult:
         """Run a read-only git command. Returns a GitResult."""
