@@ -160,11 +160,22 @@ during the audit; only test/evidence/report artifacts created.
 
 ## 18. Known Limitation
 
-- Three pre-existing user operating transcripts remain untracked by design
-  (`hasil37.md`, `lphase37.md`, `phase37-40.md`). They are user documents, not
-  project artifacts; the tracked working tree has no modified/staged/deleted
-  files. This is a documentation-level limitation, not a security or functional
-  blocker.
+- **L-1 (Non-blocking):** Three pre-existing user operating transcripts remain
+  untracked by design (`hasil37.md`, `lphase37.md`, `phase37-40.md`). They are
+  user documents, not project artifacts. The tracked working tree has no
+  modified/staged/deleted files, and these files were never staged or committed
+  in any phase commit (verified via `git log --name-only` and `git status`).
+  Determination: **non-blocking** — documentation-level limitation only; no
+  security, functional, or release impact.
+
+Additional residual risks are non-blocking and catalogued with explicit
+determinations in `docs/company-f/RISK_REGISTER.md`.
+Human approval remains an authoritative gate in the pilot and is exercised by
+tests: deployment/release without human approval returns `REQUIRE_APPROVAL`
+(`tests/test_phase38a.py::test_deployment_without_human_approval_returns_require_approval`,
+`test_release_without_approval_blocked`); workflow approval waits for human
+approval (`tests/test_workflow_engine.py`); destructive policy actions require
+approval and cannot be forged (`tests/test_policy_engine.py`).
 
 ## 19. Remaining Risk Register
 
