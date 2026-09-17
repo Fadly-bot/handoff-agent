@@ -110,6 +110,32 @@ NEXT_STATE
 ESCALATION
 ```
 
+### State → owner agent map
+
+Every state is owned by exactly one agent contract (defined in
+`docs/AGENT-CONTRACT.md`); OpenClaw orchestrates, never decides:
+
+| State | Owner agent |
+|---|---|
+| PROPOSAL | Human + AI Council |
+| RESEARCH | AI Council |
+| COUNCIL_REVIEW | AI Council |
+| HUMAN_APPROVAL | Human |
+| PLANNING | Project Council |
+| IMPLEMENTATION | Coding Agent |
+| HANDOFF_CHECKPOINT | Handoff Agent |
+| QUALITY_AUDIT | Quality Guardian |
+| SECURITY_AUDIT | Security Gate |
+| DEPLOYMENT_CHECK | Deployment Check |
+| HUMAN_RELEASE_APPROVAL | Human |
+| DEPLOY | Deployment Check (executor) |
+| POST_DEPLOY_VERIFY | Deployment Check + Monitoring |
+| PRODUCTION | Human-accepted terminal state |
+
+State names in this document are consistent with the agent names in
+`docs/DEVELOPMENT-F.md`, `docs/SECURITY-ARCHITECTURE.md`, and
+`docs/AGENT-CONTRACT.md`.
+
 ## HUMAN GATES
 
 Minimally two human gates; an AI/agent may not pass them automatically:
@@ -191,12 +217,13 @@ the AI/agent cannot transition to production without human release approval.
 ### Consistency Test — PASS
 Cross-checked against:
 - `docs/DEVELOPMENT-F.md` (flow preserves AI Council → Human Approval →
-  Project Council → Coding → Handoff → Quality → Security → Deployment Check →
-  Human Release Approval → Deploy → Post Deploy → Production).
+  Project Council → Coding Agent → Handoff Agent → Quality Guardian →
+  Security Gate → Deployment Check → Human Release Approval → Deploy →
+  Post Deploy → Production).
 - `docs/SECURITY-ARCHITECTURE.md` (Security Gate before Deployment Check;
-  Quality ≠ Security).
-- `docs/AGENT-CONTRACT.md` (each state maps to the owning agent contract;
-  OpenClaw orchestrates only).
+  Quality Guardian ≠ Security Gate).
+- `docs/AGENT-CONTRACT.md` (each state maps to the owning agent contract via
+  the State → owner agent map above; OpenClaw orchestrates only).
 
 ### Git Test — PASS
 `git diff --check` clean; only `docs/WORKFLOW.md` modified (existing technical

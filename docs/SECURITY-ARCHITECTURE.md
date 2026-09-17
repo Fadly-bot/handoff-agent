@@ -168,6 +168,28 @@ description.
 | Infrastructure Security | `remote.RemoteTransport` TLS verification; env allowlist; secret-free telemetry/checkpoints |
 | Agent Security | handoff `verify_before_continue`, lease/ownership, `HumanApprovalRequiredError` on unapproved acceptance |
 
+## Agent & role name map
+
+This document uses the same agent names as the rest of the Development F
+foundation (`docs/DEVELOPMENT-F.md`, `docs/AGENT-CONTRACT.md`,
+`docs/WORKFLOW.md`):
+
+```text
+AI Council          (ai_council)
+Project Council     (planning_council)
+Coding Agent        (coding_agent)
+Handoff Agent       (handoff_agent)
+Quality Guardian    (quality_guardian)
+Security Gate       (security_gate)
+Deployment Check    (deployment_check)
+OpenClaw            (orchestration)
+Human               (human — approval authority)
+```
+
+The Security Gate's release-blocking authority, Quality Guardian's read-only
+quality role, Coding Agent's no-release boundary, and the Human's final approval
+authority are consistent across all four documents.
+
 ---
 
 # PHASE 2 CHECKPOINT — PASS
