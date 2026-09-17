@@ -213,7 +213,7 @@ All FINAL CHECKPOINT 40C conditions verified:
 
 ## 21. Git Status, Final Commit Hash, and Push Status
 
-- Final commit: `PHASE40C` commit (hash recorded at commit time below).
+- Final commit: `ff1c83e` (feat(phase-40c): final handoff audit suite, final risk register, and final acceptance report).
 - `git status -sb`: `master...origin/master` in sync.
 - Push: successful.
 - HEAD == origin/master.
