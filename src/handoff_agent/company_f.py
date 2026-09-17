@@ -115,6 +115,7 @@ class DecisionStatus(str, Enum):
     GO = "go"
     NO_GO = "no_go"
     PENDING = "pending"
+    REQUIRE_REVIEW = "require_review"
 
 
 @dataclass(frozen=True)
@@ -154,6 +155,9 @@ class QualityVerdict(str, Enum):
 class DeploymentVerdict(str, Enum):
     APPROVE = "approve"
     REJECT = "reject"
+    PASS = "pass"
+    FAIL = "fail"
+    REQUIRE_APPROVAL = "require_approval"
 
 
 class CheckpointState(str, Enum):
@@ -226,6 +230,15 @@ class WorkOrder:
     created_at_ms: int = field(default_factory=_now)
     updated_at_ms: int = field(default_factory=_now)
     duplicate_of: str | None = None
+    # Phase 38A supervised-development fields (mandatory in pilot)
+    project_owner: str = ""
+    scope: str = ""
+    acceptance_criteria: list[str] = field(default_factory=list)
+    constraints: list[str] = field(default_factory=list)
+    rollback_consideration: str = ""
+    allowed_actions: list[str] = field(default_factory=list)
+    forbidden_actions: list[str] = field(default_factory=list)
+    base_head: str | None = None
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -248,6 +261,14 @@ class WorkOrder:
             "created_at_ms": self.created_at_ms,
             "updated_at_ms": self.updated_at_ms,
             "duplicate_of": self.duplicate_of,
+            "project_owner": self.project_owner,
+            "scope": self.scope,
+            "acceptance_criteria": list(self.acceptance_criteria),
+            "constraints": list(self.constraints),
+            "rollback_consideration": self.rollback_consideration,
+            "allowed_actions": list(self.allowed_actions),
+            "forbidden_actions": list(self.forbidden_actions),
+            "base_head": self.base_head,
         }
 
 
@@ -410,8 +431,14 @@ class CompanyFCoordinator:
         state_dir: str | Path | None = None,
         *,
         tracer: Any | None = None,
+        verify_git: bool = False,
+        repo_root: str | Path | None = None,
+        deployment_requires_human_approval: bool = False,
     ) -> None:
         self.state_dir = Path(state_dir) if state_dir else None
+        self.verify_git = verify_git
+        self.repo_root = Path(repo_root).resolve() if repo_root else None
+        self.deployment_requires_human_approval = deployment_requires_human_approval
         self._lock = threading.RLock()
         self._projects: dict[str, ProjectIdentity] = {}
         self._roles: dict[str, RoleIdentity] = {}
@@ -713,6 +740,133 @@ class CompanyFCoordinator:
             )
             return work_order
 
+    def _check_duplicate(self, project_id: str, title: str, description: str) -> None:
+        """Raise DuplicateWork if an identical active work order already exists."""
+        fp = self._fingerprint(title, description)
+        for existing in self._work_orders.values():
+            if (
+                existing.project_id == project_id
+                and existing.duplicate_of is None
+                and self._fingerprint(existing.title, existing.description) == fp
+                and existing.status
+                not in (WorkOrderStatus.REJECTED, WorkOrderStatus.CANCELLED, WorkOrderStatus.RELEASED)
+            ):
+                raise DuplicateWork(
+                    f"duplicate work order already active: {existing.work_order_id}"
+                )
+
+    def plan_work_order(
+        self,
+        identity: RoleIdentity | str,
+        project_id: str,
+        *,
+        title: str,
+        description: str,
+        scope: str,
+        project_owner: str,
+        acceptance_criteria: Iterable[str],
+        constraints: Iterable[str],
+        risks: Iterable[Any],
+        rollback_consideration: str,
+        required_capabilities: Iterable[str] = (),
+        approval_required: bool = False,
+        approval_note: str = "",
+        allowed_actions: Iterable[str] = (),
+        forbidden_actions: Iterable[str] = (),
+    ) -> WorkOrder:
+        """Phase 38A: create a fully-specified, supervised Work Order.
+
+        Rejects work orders that lack any of the mandatory fields: scope,
+        owner (project owner), acceptance criteria, risk, constraint, or
+        rollback consideration. Also enforces the prior-GO gate and duplicate
+        detection, exactly like :meth:`create_work_order`.
+        """
+        with self._lock:
+            role = self._authorize(identity, "plan")
+            if role.role != CompanyRole.PLANNING_COUNCIL:
+                raise CoordinatorViolation(
+                    f"role {role.role.value} cannot create a Work Order"
+                )
+            self._ensure_project(project_id)
+            decision = self.latest_decision(project_id)
+            if decision is None or decision.decision_status != DecisionStatus.GO:
+                raise CoordinatorViolation(
+                    "Work Order creation requires a prior GO decision"
+                )
+            missing: list[str] = []
+            if not (str(scope).strip()):
+                missing.append("scope")
+            if not (str(project_owner).strip()):
+                missing.append("owner")
+            criteria = list(acceptance_criteria)
+            if not criteria or not all(str(c).strip() for c in criteria):
+                missing.append("acceptance_criteria")
+            cons = list(constraints)
+            if not cons or not all(str(c).strip() for c in cons):
+                missing.append("constraint")
+            risk_list = [Risk(**r) if isinstance(r, dict) else r for r in risks]
+            if not risk_list:
+                missing.append("risk")
+            if not (str(rollback_consideration).strip()):
+                missing.append("rollback_consideration")
+            if missing:
+                raise CoordinatorViolation(
+                    "work order missing mandatory field(s): " + ",".join(missing)
+                )
+            self._check_duplicate(project_id, title, description)
+            approval = ApprovalRequirement(
+                required=approval_required or self.deployment_requires_human_approval,
+                approver_role=CompanyRole.HUMAN,
+                note=approval_note,
+            )
+            work_order = WorkOrder(
+                work_order_id=new_id("wo"),
+                project_id=project_id,
+                decision_id=decision.decision_id,
+                title=title,
+                description=description,
+                required_capabilities=frozenset(required_capabilities),
+                status=WorkOrderStatus.PLANNED,
+                approval=approval,
+                project_owner=str(project_owner).strip(),
+                scope=str(scope).strip(),
+                acceptance_criteria=[str(c).strip() for c in criteria],
+                constraints=[str(c).strip() for c in cons],
+                rollback_consideration=str(rollback_consideration).strip(),
+                allowed_actions=[str(a).strip() for a in allowed_actions],
+                forbidden_actions=[str(a).strip() for a in forbidden_actions],
+            )
+            work_order.plan = Plan(
+                work_order_id=work_order.work_order_id,
+                strategy="supervised-pilot",
+                risks=risk_list,
+            )
+            decision.work_orders_created.append(work_order.work_order_id)
+            self._work_orders[work_order.work_order_id] = work_order
+            self._audit_event(
+                work_order.work_order_id,
+                role.agent_id,
+                "work_order.created",
+                "none",
+                WorkOrderStatus.PLANNED.value,
+                "fully-specified work order registered after GO decision",
+            )
+            self._trace(
+                domain=TelemetryDomain.WORKORDER.value,
+                operation="workorder.plan38",
+                status=TelemetryStatus.OK.value,
+                project_id=project_id,
+                resource=work_order.work_order_id,
+                actor=role.agent_id,
+                metadata={
+                    "work_order_id": work_order.work_order_id,
+                    "decision_id": decision.decision_id,
+                    "project_owner": str(project_owner).strip(),
+                    "risk_count": len(risk_list),
+                },
+            )
+            return work_order
+
     def get_work_order(self, work_order_id: str) -> WorkOrder | None:
         with self._lock:
             return self._work_orders.get(work_order_id)
@@ -835,6 +989,14 @@ class CompanyFCoordinator:
                 )
             work_order.assigned_agent = agent.agent_id
             work_order.owner = agent.agent_id
+            if self.verify_git:
+                try:
+                    from handoff_agent.git_inspector import inspect_repository
+
+                    info = inspect_repository(self.repo_root)
+                    work_order.base_head = info.head_commit or work_order.base_head
+                except Exception:  # pragma: no cover - defensive
+                    work_order.base_head = None
             self._transition(
                 work_order,
                 WorkOrderStatus.EXECUTING,
@@ -883,7 +1045,106 @@ class CompanyFCoordinator:
             return False
         return True
 
+    # -- scoped actions (Phase 38A) --------------------------------------
+
+    def _action_in_scope(self, work_order: WorkOrder, action: str) -> bool:
+        action = str(action).strip()
+        if work_order.forbidden_actions and action in work_order.forbidden_actions:
+            return False
+        if work_order.allowed_actions and action not in work_order.allowed_actions:
+            return False
+        return True
+
+    def record_action(
+        self,
+        identity: RoleIdentity | str,
+        work_order_id: str,
+        action: str,
+        description: str = "",
+    ) -> bool:
+        """Record an executing agent's action with scope enforcement.
+
+        Every action is audited. An action outside the work order's declared
+        scope (forbidden actions, or actions not in the allow-list) is
+        rejected with a `CoordinatorViolation` and an ``action.out_of_scope``
+        audit event — no silent overwrite, no scope creep.
+        """
+        with self._lock:
+            role = self._authorize(identity, "execute")
+            work_order = self._require_work_order(work_order_id)
+            if work_order.assigned_agent != role.agent_id:
+                raise CoordinatorViolation(
+                    f"agent {role.agent_id} is not the assigned coder of {work_order_id}"
+                )
+            if work_order.status != WorkOrderStatus.EXECUTING:
+                raise InvalidTransition(
+                    "actions may only be recorded while the work order is executing"
+                )
+            if not self._action_in_scope(work_order, action):
+                self._audit_event(
+                    work_order.work_order_id,
+                    role.agent_id,
+                    "action.out_of_scope",
+                    work_order.status.value,
+                    work_order.status.value,
+                    f"out-of-scope action blocked: {action}",
+                )
+                self._trace(
+                    domain=TelemetryDomain.WORKORDER.value,
+                    operation="workorder.action",
+                    status=TelemetryStatus.BLOCKED.value,
+                    project_id=work_order.project_id,
+                    resource=work_order.work_order_id,
+                    actor=role.agent_id,
+                    metadata={"work_order_id": work_order.work_order_id, "action": action},
+                )
+                raise CoordinatorViolation(
+                    f"action {action!r} is out of scope for work order {work_order_id}"
+                )
+            self._audit_event(
+                work_order.work_order_id,
+                role.agent_id,
+                "action.recorded",
+                work_order.status.value,
+                work_order.status.value,
+                f"in-scope action: {action} — {description}",
+            )
+            self._trace(
+                domain=TelemetryDomain.WORKORDER.value,
+                operation="workorder.action",
+                status=TelemetryStatus.OK.value,
+                project_id=work_order.project_id,
+                resource=work_order.work_order_id,
+                actor=role.agent_id,
+                metadata={"work_order_id": work_order.work_order_id, "action": action},
+            )
+            return True
+
     # -- checkpoint / handoff -------------------------------------------
+
+    def _git_state_problem(self, work_order: WorkOrder) -> str | None:
+        """Return a problem description when repo Git state cannot be verified.
+
+        Handoff only accepts a checkpoint when the coding agent's base Git
+        HEAD still matches the repository HEAD. A divergent or unverifiable
+        repository is handled safely (rejection, never silent acceptance).
+        """
+        if self.repo_root is None or not self.repo_root.exists():
+            return "repo_root for Git-state verification is not available"
+        try:
+            from handoff_agent.git_inspector import inspect_repository
+
+            info = inspect_repository(self.repo_root)
+        except Exception as exc:  # pragma: no cover - defensive
+            return f"Git state could not be verified: {exc}"
+        if not info.head_commit:
+            return "repository HEAD could not be determined"
+        if work_order.base_head and info.head_commit != work_order.base_head:
+            return (
+                f"Git state diverged: expected {work_order.base_head[:12]}, "
+                f"found {info.head_commit[:12]}"
+            )
+        return None
 
     def submit_checkpoint(
         self,
@@ -911,6 +1172,11 @@ class CompanyFCoordinator:
             ):
                 check = CheckpointState.STALE
                 reason = f"checkpoint submitted for stale state {work_order.status.value}"
+            if check == CheckpointState.VALID and self.verify_git:
+                git_problem = self._git_state_problem(work_order)
+                if git_problem is not None:
+                    check = CheckpointState.STALE
+                    reason = git_problem
             if check != CheckpointState.VALID:
                 raise HandoffRejection(reason or f"checkpoint rejected ({check.value})")
             serialized = json.dumps(state, sort_keys=True, default=str)
@@ -1126,6 +1392,192 @@ class CompanyFCoordinator:
             )
             return result
 
+    def run_deployment_check(
+        self,
+        identity: RoleIdentity | str,
+        work_order_id: str,
+        *,
+        rollback_ready: bool = False,
+        note: str = "",
+    ) -> DeploymentGateResult:
+        """Phase 38A supervised deployment check.
+
+        Emits PASS / FAIL / REQUIRE_APPROVAL based on real evidence:
+
+        - the work order must already hold a Quality PASS;
+        - a rollback plan must be in place (``rollback_ready``), otherwise FAIL;
+        - when deployment requires human approval and none is granted, the
+          verdict is REQUIRE_APPROVAL and no release may proceed;
+        - PASS moves the work order to DEPLOYMENT_GATED — release still
+          requires a human approval and a later explicit ``release``.
+        """
+        with self._lock:
+            role = self._authorize(identity, "deployment_gate")
+            if role.role != CompanyRole.DEPLOYMENT_CHECK:
+                raise CoordinatorViolation(
+                    f"role {role.role.value} cannot run the deployment check"
+                )
+            work_order = self._require_work_order(work_order_id)
+            if work_order.status != WorkOrderStatus.QUALITY_GATED:
+                raise InvalidTransition(
+                    "deployment check requires a quality-gated work order"
+                )
+            if work_order.last_quality_verdict != QualityVerdict.PASS.value:
+                result = DeploymentGateResult(
+                    gate_id=new_id("dg"),
+                    work_order_id=work_order_id,
+                    verdict=DeploymentVerdict.FAIL,
+                    reviewer=role.agent_id,
+                    rollback_ready=rollback_ready,
+                    note=note or "deployment blocked: Quality PASS missing",
+                )
+                self._deployment_gates[result.gate_id] = result
+                work_order.last_deployment_verdict = result.verdict.value
+                self._trace(
+                    domain=TelemetryDomain.DEPLOYMENT.value,
+                    operation="deployment.check",
+                    status=TelemetryStatus.BLOCKED.value,
+                    project_id=work_order.project_id,
+                    resource=work_order.work_order_id,
+                    actor=role.agent_id,
+                    metadata={
+                        "work_order_id": work_order.work_order_id,
+                        "gate_id": result.gate_id,
+                        "verdict": result.verdict.value,
+                    },
+                )
+                return result
+
+            approval_ok = (
+                work_order.approval.required and work_order.approval.satisfied
+            )
+            if self.deployment_requires_human_approval and not approval_ok:
+                result = DeploymentGateResult(
+                    gate_id=new_id("dg"),
+                    work_order_id=work_order_id,
+                    verdict=DeploymentVerdict.REQUIRE_APPROVAL,
+                    reviewer=role.agent_id,
+                    rollback_ready=rollback_ready,
+                    note=note or "deployment requires human approval",
+                )
+                self._deployment_gates[result.gate_id] = result
+                work_order.last_deployment_verdict = result.verdict.value
+                self._trace(
+                    domain=TelemetryDomain.DEPLOYMENT.value,
+                    operation="deployment.check",
+                    status=TelemetryStatus.BLOCKED.value,
+                    project_id=work_order.project_id,
+                    resource=work_order.work_order_id,
+                    actor=role.agent_id,
+                    metadata={
+                        "work_order_id": work_order.work_order_id,
+                        "gate_id": result.gate_id,
+                        "verdict": result.verdict.value,
+                    },
+                )
+                return result
+
+            if not rollback_ready:
+                result = DeploymentGateResult(
+                    gate_id=new_id("dg"),
+                    work_order_id=work_order_id,
+                    verdict=DeploymentVerdict.FAIL,
+                    reviewer=role.agent_id,
+                    rollback_ready=False,
+                    note=note or "deployment blocked: rollback plan not ready",
+                )
+                self._deployment_gates[result.gate_id] = result
+                work_order.last_deployment_verdict = result.verdict.value
+                self._trace(
+                    domain=TelemetryDomain.DEPLOYMENT.value,
+                    operation="deployment.check",
+                    status=TelemetryStatus.BLOCKED.value,
+                    project_id=work_order.project_id,
+                    resource=work_order.work_order_id,
+                    actor=role.agent_id,
+                    metadata={
+                        "work_order_id": work_order.work_order_id,
+                        "gate_id": result.gate_id,
+                        "verdict": result.verdict.value,
+                    },
+                )
+                return result
+
+            result = DeploymentGateResult(
+                gate_id=new_id("dg"),
+                work_order_id=work_order_id,
+                verdict=DeploymentVerdict.PASS,
+                reviewer=role.agent_id,
+                rollback_ready=True,
+                note=note or "deployment check passed with rollback readiness",
+            )
+            self._deployment_gates[result.gate_id] = result
+            work_order.last_deployment_verdict = result.verdict.value
+            self._transition(
+                work_order,
+                WorkOrderStatus.DEPLOYMENT_GATED,
+                role.agent_id,
+                "deployment.pass",
+                "deployment check PASS with rollback readiness",
+            )
+            self._trace(
+                domain=TelemetryDomain.DEPLOYMENT.value,
+                operation="deployment.check",
+                status=TelemetryStatus.OK.value,
+                project_id=work_order.project_id,
+                resource=work_order.work_order_id,
+                actor=role.agent_id,
+                metadata={
+                    "work_order_id": work_order.work_order_id,
+                    "gate_id": result.gate_id,
+                    "rollback_ready": True,
+                    "verdict": result.verdict.value,
+                },
+            )
+            return result
+
+    def approve_deployment(
+        self,
+        identity: RoleIdentity | str,
+        work_order_id: str,
+        note: str = "",
+    ) -> ApprovalRequirement:
+        """Phase 38A: only a human approver may authorize deployment.
+
+        Cannot be bypassed: approval is recorded as audit evidence and
+        decides the REQUIRE_APPROVAL -> PASS path inside
+        :meth:`run_deployment_check`.
+        """
+        with self._lock:
+            role = self._authorize(identity, "approve")
+            if role.role != CompanyRole.HUMAN:
+                raise CoordinatorViolation(
+                    "only a human may approve deployment for release"
+                )
+            work_order = self._require_work_order(work_order_id)
+            work_order.approval.required = True
+            work_order.approval.satisfied = True
+            work_order.approval.approved_by = role.agent_id
+            work_order.approval.approved_at_ms = _now()
+            self._audit_event(
+                work_order.work_order_id,
+                role.agent_id,
+                "deployment.approved",
+                work_order.status.value,
+                work_order.status.value,
+                note or "human approval granted for deployment",
+            )
+            self._trace(
+                domain=TelemetryDomain.DEPLOYMENT.value,
+                operation="deployment.approve",
+                status=TelemetryStatus.OK.value,
+                project_id=work_order.project_id,
+                resource=work_order.work_order_id,
+                actor=role.agent_id,
+                metadata={"work_order_id": work_order.work_order_id},
+            )
+            return work_order.approval
+
     def release(self, identity: RoleIdentity | str, work_order_id: str) -> WorkOrder:
         with self._lock:
             role = self._authorize(identity, "deployment_gate")
@@ -1232,6 +1684,10 @@ class CompanyFCoordinator:
         with self._lock:
             role = self._authorize(identity, "execute")
             work_order = self._require_work_order(work_order_id)
+            if work_order.status == WorkOrderStatus.CONFLICT and role.role != CompanyRole.HUMAN:
+                raise CoordinatorViolation(
+                    "exiting CONFLICT requires human review and approval"
+                )
             self._transition(
                 work_order,
                 WorkOrderStatus.EXECUTING,
@@ -1421,6 +1877,14 @@ class CompanyFCoordinator:
             created_at_ms=w.get("created_at_ms", 0),
             updated_at_ms=w.get("updated_at_ms", 0),
             duplicate_of=w.get("duplicate_of"),
+            project_owner=w.get("project_owner", ""),
+            scope=w.get("scope", ""),
+            acceptance_criteria=list(w.get("acceptance_criteria", [])),
+            constraints=list(w.get("constraints", [])),
+            rollback_consideration=w.get("rollback_consideration", ""),
+            allowed_actions=list(w.get("allowed_actions", [])),
+            forbidden_actions=list(w.get("forbidden_actions", [])),
+            base_head=w.get("base_head"),
         )
 
     def __len__(self) -> int:
